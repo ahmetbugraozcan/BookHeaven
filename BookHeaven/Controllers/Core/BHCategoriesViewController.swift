@@ -1,17 +1,18 @@
 //
-//  BHHomeViewController.swift
+//  BHCategoriesViewController.swift
 //  BookHeaven
 //
-//  Created by Ahmet Buğra Özcan on 7.01.2023.
+//  Created by Ahmet Buğra Özcan on 8.01.2023.
 //
 
 import UIKit
 
-class BHHomeViewController: UIViewController {
+class BHCategoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemBackground
+        
         // Do any additional setup after loading the view.
     }
     

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Splash view which appears first launch of app
 class BHSplashViewController: UIViewController {
 
     let loadingIndicator: UIActivityIndicatorView = {
@@ -39,10 +40,13 @@ class BHSplashViewController: UIViewController {
             loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
-
+    
     private func navigateToHomeScreen(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-            self.navigationController?.setViewControllers([BHHomeViewController()], animated: true)
+            
+            let window = UIApplication.shared.keyWindow
+            window?.rootViewController = BHTabBarController()
+            
         }
     }
     

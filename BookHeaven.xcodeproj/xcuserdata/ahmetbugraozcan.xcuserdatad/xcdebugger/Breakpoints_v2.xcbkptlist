@@ -20,5 +20,485 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68268703-1C7D-4A03-9013-9CE464B42925"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/APIClient/BHService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "request(request:expected:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68268703-1C7D-4A03-9013-9CE464B42925 - ad6560174dbf3cda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BookHeaven.BHService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: BookHeaven.BHRequest, expected: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/APIClient/BHService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "68268703-1C7D-4A03-9013-9CE464B42925 - ad6560174dbf3cda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BookHeaven.BHService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: BookHeaven.BHRequest, expected: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/APIClient/BHService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "183978E1-EA9C-456A-B23E-EE99544E1658"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/APIClient/BHService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "request(request:expected:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7401604D-5D53-4966-9444-7C58AAB39A76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDE85C1C-FE91-4F50-A829-0037981614E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94996E3E-312B-4C6F-8914-BCE64E73A894"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36B0EC56-2251-4434-948E-8C33A88755D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "BHHomeCollectionView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "36B0EC56-2251-4434-948E-8C33A88755D2 - ea704bc9eaa42671"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHeaven.BHHomeCollectionView.setUpCollectionView() -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "36B0EC56-2251-4434-948E-8C33A88755D2 - 288f4272c0917e7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UICollectionView, Foundation.IndexPath, Swift.Optional&lt;Swift.Int&gt;) -&gt; Swift.Optional&lt;__C.UICollectionViewCell&gt; in BookHeaven.BHHomeCollectionView.setUpCollectionView() -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FE6A2BD-35DD-4519-AD70-533BD0D54D46"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "updateSnapshot(reloading:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA7FA0EA-3E10-4068-93C7-71086F869B81"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "updateSnapshot(reloading:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85DC9B68-8C06-40EC-BAF3-A3CDD0686C76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "updateSnapshot(reloading:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85DC9B68-8C06-40EC-BAF3-A3CDD0686C76 - 4ae1ab6f5e266ada"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "85DC9B68-8C06-40EC-BAF3-A3CDD0686C76 - 1694008e2dea3bbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BookHeaven.Book) -&gt; Swift.String in BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1432A4AF-7684-4405-8D45-E11DFB41798A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE1014BD-9F0C-4728-A2AD-2DE7820FE033"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "updateSnapshot(reloading:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE1014BD-9F0C-4728-A2AD-2DE7820FE033 - 432e1974fc3004f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "BE1014BD-9F0C-4728-A2AD-2DE7820FE033 - 4ae1ab6f5e266a84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F2BC22F-D4E9-42BC-A6CB-9A34BA3D14EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "BHHomeCollectionView"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "1F2BC22F-D4E9-42BC-A6CB-9A34BA3D14EE - 432e1974fc3004f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "1F2BC22F-D4E9-42BC-A6CB-9A34BA3D14EE - 4ae1ab6f5e266a84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHeaven.BHHomeCollectionView.updateSnapshot(reloading: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13609B33-435B-48F3-BF3D-C2ABA7EB5EC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67F4FD0D-D03C-4694-B7C6-EB726BAAE8BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "785E35E6-D61D-42E8-B9D3-9BE71E7A5E70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Controllers/Core/Home/BHHomeViewController+DataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "cellRegistrationHandler(cell:indexPath:itemIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13193DBE-C296-40FF-AAC7-0ECF1AEF86A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/ViewModels/BHBooksListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchBooks()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B5888E8-5CC4-4C4C-B7A5-61BC0E79C7F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Views/BHBooksListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "didLoadFirstBooks()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82C776E4-B0F0-498E-B600-75C8AA83C3CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHeaven/Views/BHBooksCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82C776E4-B0F0-498E-B600-75C8AA83C3CE - 45b9a4cfec77227e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHeaven.BHBooksCellView.configure(with: BookHeaven.Book) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Views/BHBooksCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "82C776E4-B0F0-498E-B600-75C8AA83C3CE - 5c648a95c40b65c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;__C.UIImage&gt;, Swift.Error&gt;) -&gt; () in BookHeaven.BHBooksCellView.configure(with: BookHeaven.Book) -&gt; ()"
+                  moduleName = "BookHeaven"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmetbugraozcan/Desktop/swifttutorial/BookHeaven/BookHeaven/Views/BHBooksCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
