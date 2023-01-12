@@ -8,12 +8,12 @@
 import Foundation
 
 // MARK: - Book
-struct Book: Codable, Identifiable {
+struct BHBook: Codable, Identifiable {
     let bookID: Int?
     let id: String = UUID().uuidString
-    let formats: Formats
+    let formats: BHFormats
     let title: String?
-    let authors, translators: [Author]?
+    let authors, translators: [BHAuthor]?
     let subjects, bookshelves: [String]?
     let languages: [Language]?
     let copyright: Bool?
@@ -28,8 +28,8 @@ struct Book: Codable, Identifiable {
 }
 
 
-extension Array where Element == Book {
-    func indexOfBooks(with id: Book.ID) -> Self.Index{
+extension Array where Element == BHBook {
+    func indexOfBooks(with id: BHBook.ID) -> Self.Index{
         guard let index = firstIndex(where: {$0.id == id}) else {
             fatalError()
         }

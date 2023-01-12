@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct AllBooksResponse: Codable {
+struct BHAllBooksResponse: Codable {
     let count: Int?
     let next: String?
     let previous: String?
-    let results: [Book]?
+    let results: [BHBook]?
 }

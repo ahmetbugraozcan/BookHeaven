@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Formats
 /// Book type formats 
-struct Formats: Codable {
+struct BHFormats: Codable {
     let textPlain: String?
     let applicationXMobipocketEbook, textHTML: String?
     let applicationOctetStream: String?

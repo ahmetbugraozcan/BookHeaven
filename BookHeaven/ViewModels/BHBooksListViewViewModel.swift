@@ -10,12 +10,12 @@ import UIKit
 
 /// ViewModel for BooksList on HomeView
 final class BHBooksListViewViewModel:NSObject{
-    var books: [Book] = []
+    var books: [BHBook] = []
     
     weak var delegate: BHBooksListView?
     
     func fetchBooks(){
-        BHService.shared.request(request: BHService.getBooksRequest, expected: AllBooksResponse.self) { [weak self] result in
+        BHService.shared.request(request: BHService.getBooksRequest, expected: BHAllBooksResponse.self) { [weak self] result in
             switch result {
             case .success(let success):
                 guard let books = success.results else {

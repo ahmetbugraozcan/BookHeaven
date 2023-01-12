@@ -8,5 +8,5 @@
 import Foundation
 protocol BHBooksListViewDelegate: AnyObject{
     
-    func didSelectBook(book: Book)
+    func didSelectBook(book: BHBook)
 }

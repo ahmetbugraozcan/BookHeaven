@@ -135,12 +135,12 @@ final class BHBooksCellView: UICollectionViewCell {
         return spacerView
     }
     
-    func configure(with book: Book) {
+    func configure(with book: BHBook) {
         self.nameLabel.text = book.title
         self.authorLabel.text = book.authors?.first?.name
         self.subjectLabel.text = book.subjects?.first ?? ""
         self.languageLabel.text = book.languages?.first?.getFullName() ?? ""
-        ImageManager.shared.downloadImage(with: book.formats.imageJPEG) { result in
+        BHImageManager.shared.downloadImage(with: book.formats.imageJPEG) { result in
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {

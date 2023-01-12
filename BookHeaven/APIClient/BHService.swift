@@ -54,4 +54,27 @@ final class BHService{
 extension BHService{
     
     static let getBooksRequest = BHRequest(endPoint: .books)
+    
+    static func getBookDetailsRequest(with query: String) -> BHRequest {
+        var apiKey: String? = nil
+        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist"){
+                    if let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
+                        let key = dict["GOOGLE_BOOKS_API_KEY"] as? String
+                        if(key == nil || key!.isEmpty){
+                            apiKey = "DEMO_KEY"
+                        } else {
+                            apiKey = dict["GOOGLE_BOOKS_API_KEY"] as? String
+                        }
+
+                    }
+                }
+        
+       return BHRequest(endPoint: .volumes, queryParameters: [
+            URLQueryItem(name: "q", value: query),
+            URLQueryItem(name: "key", value: apiKey),
+            URLQueryItem(name: "startIndex", value: "0"),
+            URLQueryItem(name: "maxResults", value: "1"),
+        ], requestEndPointType: .google)
+    }
+ 
 }

@@ -12,4 +12,5 @@ import Foundation
 @frozen enum BHEndpoint:String {
     /// Endpoint to get books
     case books
+    case volumes
 }

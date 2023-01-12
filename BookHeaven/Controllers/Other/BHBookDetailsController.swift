@@ -11,6 +11,7 @@ class BHBookDetailsViewController: UIViewController{
     
     var viewModel: BHBooksDetailViewModel
     
+    
     var imageView: UIImageView = {
        let imageview = UIImageView()
         imageview.translatesAutoresizingMaskIntoConstraints = false
@@ -22,6 +23,14 @@ class BHBookDetailsViewController: UIViewController{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .red
+        return label
+    }()
+    
+    var bookDescription: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .blue
+        label.numberOfLines = 0
         return label
     }()
     
@@ -40,23 +49,30 @@ class BHBookDetailsViewController: UIViewController{
         view.backgroundColor = .systemBackground
         navigationItem.largeTitleDisplayMode = .never
         configure(with: viewModel.book)
-        view.addSubViews(labelTitle, imageView)
+        
+        view.addSubViews(imageView,labelTitle,bookDescription )
+        
         addConstraints()
         
     }
     
-    func configure(with book: Book){
+    func configure(with book: BHBook){
         labelTitle.text = viewModel.book.title
-        ImageManager.shared.downloadImage(with: viewModel.book.formats.imageJPEG) { result in
+
+        bookDescription.text = viewModel.book.subjects?.joined(separator: ",")
+        BHImageManager.shared.downloadImage(with: viewModel.book.formats.imageJPEG) { result in
             switch result {
             case .success(let success):
                 self.imageView.image = UIImage(data: success)
+                
             case .failure(let failure):
                 print("error \(failure.localizedDescription)")
             }
         }
         
     }
+    
+ 
     
     func addConstraints(){
         NSLayoutConstraint.activate([
@@ -71,6 +87,12 @@ class BHBookDetailsViewController: UIViewController{
             labelTitle.leftAnchor.constraint(equalTo: view.leftAnchor),
 //            labelTitle.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             labelTitle.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+            bookDescription.leftAnchor.constraint(equalTo: view.leftAnchor),
+            bookDescription.rightAnchor.constraint(equalTo: view.rightAnchor),
+            bookDescription.topAnchor.constraint(equalTo: labelTitle.bottomAnchor),
+            
+            
             
             
         ])

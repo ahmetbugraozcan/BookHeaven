@@ -9,7 +9,7 @@ import UIKit
 
 /// View that contains list of Book
 final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
-    func didSelectBook(book: Book) {
+    func didSelectBook(book: BHBook) {
         navigationController?.pushViewController(BHBookDetailsViewController(viewModel: BHBooksDetailViewModel(book)), animated: true)
     }
  

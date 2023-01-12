@@ -13,21 +13,31 @@ final class BHRequest{
     init(
         endPoint: BHEndpoint,
         queryParameters: [URLQueryItem] = [],
-        pathComponents:[String] = []
+        pathComponents:[String] = [],
+        requestEndPointType: RequestEndPointType = .gutendex
     ) {
         self.endPoint = endPoint
         self.queryParameters = queryParameters
         self.pathComponents = pathComponents
+        self.requestEndPointType = requestEndPointType
     }
     
     
+    enum RequestEndPointType{
+        case google
+        case gutendex
+    }
+    
     private struct Constants{
         static let baseURL = "https://gutendex.com"
+        /// "${GOOGLE_BOOKS_URL}?q=$encodedName&startIndex=0&maxResults=1&apiKey=$GOOGLE_API_KEY"
+        static let googleEBooksURL = "https://www.googleapis.com/books/v1"
     }
     
     private var queryParameters: [URLQueryItem] = []
     private var pathComponents: [String] = []
     private let endPoint: BHEndpoint
+    private let requestEndPointType: RequestEndPointType
     
     public var url: URL? {
         return URL(string: urlString)
@@ -35,7 +45,7 @@ final class BHRequest{
     
     
     private var urlString: String{
-        var url = Constants.baseURL
+        var url = requestEndPointType == .gutendex ? Constants.baseURL : Constants.googleEBooksURL
         url += "/"
         url += endPoint.rawValue
         
@@ -52,7 +62,7 @@ final class BHRequest{
                     return nil
                 }
                 
-                return "\(queryItem.name)=\(value)"
+                return "\(queryItem.name)=\(value.replacingOccurrences(of: " ", with: "%20"))"
             }.joined(separator: "&")
             
             url += argumentString

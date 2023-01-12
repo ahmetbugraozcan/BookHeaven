@@ -44,6 +44,7 @@ class BHBooksListView: UIView {
         super.init(frame: frame)
         
         
+        print(String(describing: BHService.getBookDetailsRequest(with: "sherlock").url))
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubViews(collectionView, progressView)
@@ -77,7 +78,7 @@ class BHBooksListView: UIView {
 }
 
 extension BHBooksListView: BHBookListViewViewModelDelegate{
-    func didSelectBook(_ book: Book) {
+    func didSelectBook(_ book: BHBook) {
         delegate?.didSelectBook(book: book)
     }
     

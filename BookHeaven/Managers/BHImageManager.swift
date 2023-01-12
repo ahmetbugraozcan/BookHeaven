@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-final class ImageManager {
+final class BHImageManager {
     
     let cache = NSCache<NSString, NSData>()
     
-    static let shared = ImageManager()
+    static let shared = BHImageManager()
     
     private init(){}
     
