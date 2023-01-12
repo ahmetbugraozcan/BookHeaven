@@ -44,7 +44,7 @@ final class BHService{
     private func request(from request: BHRequest) -> URLRequest? {
         guard let url = request.url else {
             return nil
-        }
+        } 
         
         let urlRequest = URLRequest(url:url)
         return urlRequest

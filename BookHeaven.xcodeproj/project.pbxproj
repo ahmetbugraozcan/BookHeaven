@@ -40,6 +40,7 @@
 		12D6B5B2297048AC00257DBD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12D6B5B1297048AC00257DBD /* Keys.plist */; };
 		12F1452F2968F69D00234818 /* BHSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1452E2968F69D00234818 /* BHSplashViewController.swift */; };
 		12F145312968FEEF00234818 /* BHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F145302968FEEF00234818 /* BHHomeViewController.swift */; };
+		12FF9C93297055C2003186A6 /* BHBookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		12D6B5B1297048AC00257DBD /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		12F1452E2968F69D00234818 /* BHSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHSplashViewController.swift; sourceTree = "<group>"; };
 		12F145302968FEEF00234818 /* BHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHHomeViewController.swift; sourceTree = "<group>"; };
+		12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				1255F409296B794D00313B2C /* BHBooksListView.swift */,
 				1255F410296B7BAD00313B2C /* BHBooksCellView.swift */,
 				1255F41D296DACAD00313B2C /* BHBooksListViewDelegate.swift */,
+				12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				1255F411296B7BAD00313B2C /* BHBooksCellView.swift in Sources */,
 				12A50C6D2968EBDC0089478D /* SceneDelegate.swift in Sources */,
 				1255F41E296DACAD00313B2C /* BHBooksListViewDelegate.swift in Sources */,
+				12FF9C93297055C2003186A6 /* BHBookDetailsView.swift in Sources */,
 				12F1452F2968F69D00234818 /* BHSplashViewController.swift in Sources */,
 				1255F3F8296AF53900313B2C /* BHAllBooksResponse.swift in Sources */,
 				12F145312968FEEF00234818 /* BHHomeViewController.swift in Sources */,
