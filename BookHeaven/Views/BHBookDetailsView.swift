@@ -11,13 +11,31 @@ import UIKit
 class BHBookDetailsView: UIView{
     
     
-    
+    /// Holder that holds title, authorname, downloadcount
     var bookInfoColumn: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return stackView
+    }()
+    
+    
+    var labelTitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .headline)
+        
+        label.numberOfLines = 2
+        
+        return label
+    }()
+    
+    var authorLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 14)
+        return label
     }()
     
     
@@ -45,37 +63,21 @@ class BHBookDetailsView: UIView{
         return imageview
     }()
     
- 
-    var labelTitle: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .preferredFont(forTextStyle: .headline)
-
-        label.numberOfLines = 2
-        
-        return label
-    }()
-    
-    var authorLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
-        return label
-    }()
     
     var summaryTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .preferredFont(forTextStyle: .title2)
+        
+        label.font = UIFont.boldSystemFont(ofSize: UIFont.preferredFont(forTextStyle: .title2).pointSize)
         label.text = "Summary"
         return label
     }()
     
     var summaryLabel: UILabel = {
         let label = UILabel()
-
+        
         label.translatesAutoresizingMaskIntoConstraints = false
- 
+        
         label.numberOfLines = 0
         return label
     }()
@@ -90,8 +92,12 @@ class BHBookDetailsView: UIView{
         return label
     }()
     
-    
-    
+    var pageAndLanguageInfoView: BHBookPageAndLanguageInfoRow = {
+        var row = BHBookPageAndLanguageInfoRow()
+ 
+        
+        return row
+    }()
     
     
     override init(frame: CGRect) {
@@ -104,7 +110,7 @@ class BHBookDetailsView: UIView{
         headerViewContainer.addSubViews(imageView, bookInfoColumn)
         
         
-        addSubViews(headerViewContainer,summaryTitle,summaryLabel)
+        addSubViews(headerViewContainer, pageAndLanguageInfoView,summaryTitle,summaryLabel)
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -115,11 +121,14 @@ class BHBookDetailsView: UIView{
     required init(coder: NSCoder) {
         fatalError("Unsupported")
     }
-
+    
     
     func addConstraints(){
         NSLayoutConstraint.activate([
-
+            bookInfoColumn.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            bookInfoColumn.leftAnchor.constraint(equalTo: imageView.rightAnchor),
+            bookInfoColumn.rightAnchor.constraint(equalTo: headerViewContainer.rightAnchor, constant: -20),
+            
             headerViewContainer.leftAnchor.constraint(equalTo: leftAnchor),
             headerViewContainer.rightAnchor.constraint(equalTo: rightAnchor),
             headerViewContainer.topAnchor.constraint(equalTo: topAnchor),
@@ -132,14 +141,18 @@ class BHBookDetailsView: UIView{
             imageView.leftAnchor.constraint(equalTo: headerViewContainer.leftAnchor, constant: 20),
             imageView.rightAnchor.constraint(equalTo: bookInfoColumn.leftAnchor, constant: -20),
             
-            bookInfoColumn.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            bookInfoColumn.leftAnchor.constraint(equalTo: imageView.rightAnchor),
-            bookInfoColumn.rightAnchor.constraint(equalTo: headerViewContainer.rightAnchor, constant: -20),
-            
-            
+//
+//            pageAndLanguageInfoView.widthAnchor.constraint(equalToConstant: 300),
+//            pageAndLanguageInfoView.heightAnchor.constraint(equalToConstant: 300),
+            pageAndLanguageInfoView.topAnchor.constraint(equalTo: headerViewContainer.bottomAnchor, constant: 16),
+            pageAndLanguageInfoView.bottomAnchor.constraint(equalTo: summaryTitle.topAnchor, constant: -16),
+            pageAndLanguageInfoView.leftAnchor.constraint(equalTo: summaryTitle.leftAnchor),
+//            pageAndLanguageInfoView.leftAnchor.constraint(equalTo: leftAnchor),
+//            pageAndLanguageInfoView.rightAnchor.constraint(equalTo: rightAnchor),
+//
             summaryTitle.leftAnchor.constraint(equalTo: summaryLabel.leftAnchor),
             summaryTitle.rightAnchor.constraint(equalTo: summaryLabel.rightAnchor),
-            summaryTitle.topAnchor.constraint(equalTo: headerViewContainer.bottomAnchor, constant: 16),
+            summaryTitle.topAnchor.constraint(equalTo: pageAndLanguageInfoView.bottomAnchor, constant: 16),
             summaryTitle.bottomAnchor.constraint(equalTo: summaryLabel.topAnchor),
             
             
@@ -147,24 +160,6 @@ class BHBookDetailsView: UIView{
             summaryLabel.rightAnchor.constraint(equalTo: rightAnchor),
             summaryLabel.topAnchor.constraint(equalTo:summaryTitle.bottomAnchor, constant: 10),
             summaryLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
-            
-//            summaryLabel.bottomAnchor.constraint(equalTo: )
-            
-            //
-            //
-            //            labelTitle.leftAnchor.constraint(equalTo: imageView.rightAnchor),
-            //            labelTitle.rightAnchor.constraint(equalTo: rightAnchor),
-            //            labelTitle.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            //
-            ////            labelTitle.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            //
-            //
-            //            bookDescription.leftAnchor.constraint(equalTo: labelTitle.leftAnchor),
-            //            bookDescription.rightAnchor.constraint(equalTo: labelTitle.rightAnchor),
-            //            bookDescription.topAnchor.constraint(equalTo: labelTitle.bottomAnchor),
-            //
-            
-            
             
         ])
     }

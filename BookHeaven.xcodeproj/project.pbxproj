@@ -41,6 +41,7 @@
 		12F1452F2968F69D00234818 /* BHSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1452E2968F69D00234818 /* BHSplashViewController.swift */; };
 		12F145312968FEEF00234818 /* BHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F145302968FEEF00234818 /* BHHomeViewController.swift */; };
 		12FF9C93297055C2003186A6 /* BHBookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */; };
+		12FF9C952971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF9C942971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		12F1452E2968F69D00234818 /* BHSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHSplashViewController.swift; sourceTree = "<group>"; };
 		12F145302968FEEF00234818 /* BHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHHomeViewController.swift; sourceTree = "<group>"; };
 		12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailsView.swift; sourceTree = "<group>"; };
+		12FF9C942971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookPageAndLanguageInfoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				1255F410296B7BAD00313B2C /* BHBooksCellView.swift */,
 				1255F41D296DACAD00313B2C /* BHBooksListViewDelegate.swift */,
 				12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */,
+				12FF9C942971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				12D6B5B02970478200257DBD /* BHBookDetailsResponse.swift in Sources */,
 				12A50C6B2968EBDC0089478D /* AppDelegate.swift in Sources */,
 				1255F40F296B7A0D00313B2C /* BHBooksListViewViewModel.swift in Sources */,
+				12FF9C952971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift in Sources */,
 				1255F3F3296AF33F00313B2C /* BHSettingsViewController.swift in Sources */,
 				1255F416296C4CCF00313B2C /* BHFormats.swift in Sources */,
 				1255F3FC296AF7C500313B2C /* BHAuthor.swift in Sources */,
