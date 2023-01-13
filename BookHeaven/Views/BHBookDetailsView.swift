@@ -11,18 +11,28 @@ import UIKit
 class BHBookDetailsView: UIView{
     
     
-    var horizontalStackView: UIStackView = {
+    
+    var bookInfoColumn: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.backgroundColor = .red
+
         return stackView
     }()
+    
+    
     
     private var spacer = {
         let spacer = UIView(frame: .zero)
         spacer.translatesAutoresizingMaskIntoConstraints = false
         return spacer
+    }()
+    
+    var headerViewContainer: UIView = {
+        let view = UIView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
     }()
     
     var imageView: UIImageView = {
@@ -35,11 +45,12 @@ class BHBookDetailsView: UIView{
         return imageview
     }()
     
+ 
     var labelTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .headline)
-        
+
         label.numberOfLines = 2
         
         return label
@@ -48,9 +59,24 @@ class BHBookDetailsView: UIView{
     var authorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        label.numberOfLines = 3
+        label.font = .systemFont(ofSize: 14)
+        return label
+    }()
+    
+    var summaryTitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .title2)
+        label.text = "Summary"
+        return label
+    }()
+    
+    var summaryLabel: UILabel = {
+        let label = UILabel()
+
+        label.translatesAutoresizingMaskIntoConstraints = false
+ 
+        label.numberOfLines = 0
         return label
     }()
     
@@ -65,34 +91,65 @@ class BHBookDetailsView: UIView{
     }()
     
     
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        horizontalStackView.addArrangedSubview(labelTitle)
-        horizontalStackView.addArrangedSubview(authorLabel)
-        horizontalStackView.addArrangedSubview(spacer)
-        horizontalStackView.addArrangedSubview(downloadCountLabel)
-        addSubViews(imageView, horizontalStackView)
+        bookInfoColumn.addArrangedSubview(labelTitle)
+        bookInfoColumn.addArrangedSubview(authorLabel)
+        bookInfoColumn.addArrangedSubview(spacer)
+        bookInfoColumn.addArrangedSubview(downloadCountLabel)
+        
+        headerViewContainer.addSubViews(imageView, bookInfoColumn)
+        
+        
+        addSubViews(headerViewContainer,summaryTitle,summaryLabel)
+        
         translatesAutoresizingMaskIntoConstraints = false
+        
         addConstraints()
     }
     
-    required init?(coder: NSCoder) {
+    
+    required init(coder: NSCoder) {
         fatalError("Unsupported")
     }
+
     
     func addConstraints(){
         NSLayoutConstraint.activate([
+
+            headerViewContainer.leftAnchor.constraint(equalTo: leftAnchor),
+            headerViewContainer.rightAnchor.constraint(equalTo: rightAnchor),
+            headerViewContainer.topAnchor.constraint(equalTo: topAnchor),
+            headerViewContainer.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
             
             imageView.heightAnchor.constraint(equalToConstant: 250),
             imageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 2.5),
             spacer.heightAnchor.constraint(equalToConstant: 10),
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            imageView.rightAnchor.constraint(equalTo: horizontalStackView.leftAnchor, constant: -20),
+            imageView.topAnchor.constraint(equalTo: headerViewContainer.topAnchor, constant: 30),
+            imageView.leftAnchor.constraint(equalTo: headerViewContainer.leftAnchor, constant: 20),
+            imageView.rightAnchor.constraint(equalTo: bookInfoColumn.leftAnchor, constant: -20),
             
-            horizontalStackView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            horizontalStackView.leftAnchor.constraint(equalTo: imageView.rightAnchor),
-            horizontalStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
+            bookInfoColumn.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            bookInfoColumn.leftAnchor.constraint(equalTo: imageView.rightAnchor),
+            bookInfoColumn.rightAnchor.constraint(equalTo: headerViewContainer.rightAnchor, constant: -20),
+            
+            
+            summaryTitle.leftAnchor.constraint(equalTo: summaryLabel.leftAnchor),
+            summaryTitle.rightAnchor.constraint(equalTo: summaryLabel.rightAnchor),
+            summaryTitle.topAnchor.constraint(equalTo: headerViewContainer.bottomAnchor, constant: 16),
+            summaryTitle.bottomAnchor.constraint(equalTo: summaryLabel.topAnchor),
+            
+            
+            summaryLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor),
+            summaryLabel.rightAnchor.constraint(equalTo: rightAnchor),
+            summaryLabel.topAnchor.constraint(equalTo:summaryTitle.bottomAnchor, constant: 10),
+            summaryLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            
+//            summaryLabel.bottomAnchor.constraint(equalTo: )
+            
             //
             //
             //            labelTitle.leftAnchor.constraint(equalTo: imageView.rightAnchor),

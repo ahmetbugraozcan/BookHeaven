@@ -13,10 +13,27 @@ class BHBookDetailsViewController: UIViewController{
     
     
     var detailsView: BHBookDetailsView
+    var scrollView: UIScrollView = {
+        let scrollview = UIScrollView()
+        scrollview.translatesAutoresizingMaskIntoConstraints = false
+        
+        return scrollview
+    }()
+    
+    var loadingView: UIActivityIndicatorView = {
+        var view = UIActivityIndicatorView()
+        view.hidesWhenStopped = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.startAnimating()
+        
+        return view
+    }()
     
     init(viewModel: BHBooksDetailViewModel) {
         self.viewModel = viewModel
         self.detailsView =  BHBookDetailsView(frame: .zero)
+        detailsView.alpha = 0
+//        detailsView.backgroundColor = .blue
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,18 +47,30 @@ class BHBookDetailsViewController: UIViewController{
         navigationItem.largeTitleDisplayMode = .never
         configure(with: viewModel.book)
         
-        view.addSubViews(detailsView)
+        scrollView.addSubview(detailsView)
+        view.addSubViews(scrollView, loadingView)
         addConstraints()
         
     }
     
     func addConstraints(){
         NSLayoutConstraint.activate([
-            detailsView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            detailsView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            detailsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            detailsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
+            
+    
+            detailsView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            detailsView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            detailsView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            detailsView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
+//            scrollView.heightAnchor.constraint(equalTo: detailsView.heightAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
         ])
     }
@@ -50,7 +79,30 @@ class BHBookDetailsViewController: UIViewController{
         detailsView.labelTitle.text = viewModel.book.title
         
         detailsView.authorLabel.text = viewModel.book.authors?.first?.name
-        detailsView.downloadCountLabel.text = viewModel.book.downloadCount?.description
+        detailsView.downloadCountLabel.text = "\(viewModel.book.downloadCount ?? 0) Downloads"
+        
+        viewModel.getBookDetails{ [weak self] bookDetailsResponse in
+   
+            switch bookDetailsResponse{
+            case .failure(let error):
+                print(String(describing: error))
+                
+            case .success(let bookDetail):
+               
+                    DispatchQueue.main.async {
+                        UIView.animate(withDuration: 0.4, delay: 0) {
+                        self?.loadingView.stopAnimating()
+                        self?.detailsView.summaryLabel.text = bookDetail.volumeInfo?.description
+                        self?.detailsView.alpha = 1
+                    }
+                    
+                 
+                }
+            }
+            
+          
+        }
+        
         BHImageManager.shared.downloadImage(with: viewModel.book.formats.imageJPEG) { result in
             switch result {
             case .success(let success):
@@ -63,9 +115,9 @@ class BHBookDetailsViewController: UIViewController{
     }
     
 }
-        
-    
-        
-    
- 
+
+
+
+
+
 
