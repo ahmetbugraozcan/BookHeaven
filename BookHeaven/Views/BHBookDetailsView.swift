@@ -99,6 +99,13 @@ class BHBookDetailsView: UIView{
         return row
     }()
     
+    lazy var downloadButton: BHDownloadButton = {
+        let button = BHDownloadButton(buttonType: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -110,7 +117,7 @@ class BHBookDetailsView: UIView{
         headerViewContainer.addSubViews(imageView, bookInfoColumn)
         
         
-        addSubViews(headerViewContainer, pageAndLanguageInfoView,summaryTitle,summaryLabel)
+        addSubViews(headerViewContainer, downloadButton, pageAndLanguageInfoView,summaryTitle,summaryLabel)
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -147,6 +154,11 @@ class BHBookDetailsView: UIView{
             pageAndLanguageInfoView.topAnchor.constraint(equalTo: headerViewContainer.bottomAnchor, constant: 16),
             pageAndLanguageInfoView.bottomAnchor.constraint(equalTo: summaryTitle.topAnchor, constant: -16),
             pageAndLanguageInfoView.leftAnchor.constraint(equalTo: summaryTitle.leftAnchor),
+            
+            downloadButton.leftAnchor.constraint(equalTo: pageAndLanguageInfoView.rightAnchor, constant: 16),
+            downloadButton.topAnchor.constraint(equalTo: pageAndLanguageInfoView.topAnchor),
+            downloadButton.bottomAnchor.constraint(equalTo: pageAndLanguageInfoView.bottomAnchor),
+            downloadButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
 //            pageAndLanguageInfoView.leftAnchor.constraint(equalTo: leftAnchor),
 //            pageAndLanguageInfoView.rightAnchor.constraint(equalTo: rightAnchor),
 //
@@ -159,7 +171,7 @@ class BHBookDetailsView: UIView{
             summaryLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor),
             summaryLabel.rightAnchor.constraint(equalTo: rightAnchor),
             summaryLabel.topAnchor.constraint(equalTo:summaryTitle.bottomAnchor, constant: 10),
-            summaryLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            summaryLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30)
             
         ])
     }
