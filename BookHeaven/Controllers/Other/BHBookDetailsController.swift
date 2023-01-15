@@ -96,7 +96,7 @@ class BHBookDetailsViewController: UIViewController{
                         self?.loadingView.stopAnimating()
                         self?.detailsView.summaryLabel.text = bookDetail.volumeInfo?.description ?? "No summary found"
                         self?.detailsView.pageAndLanguageInfoView.pageCountLabel.text = "\(bookDetail.volumeInfo?.pageCount ?? 0) pages"
-                        self?.detailsView.pageAndLanguageInfoView.languageLabel.text = book.languages?.first?.getFullName()
+                        self?.detailsView.pageAndLanguageInfoView.languageLabel.text = book.getLanguageReadableName()
                         self?.detailsView.alpha = 1
                     }
                     

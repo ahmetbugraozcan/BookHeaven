@@ -25,6 +25,10 @@ class BHBooksListView: UIView {
         collectionView.alpha = 0
         collectionView.register(BHBooksCellView.self, forCellWithReuseIdentifier: BHBooksCellView.cellIdentifier)
         
+        collectionView.register(BHFooterLoadingView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: BHFooterLoadingView.identifier)
+        
+        
+        
         return collectionView
     }()
     
@@ -42,7 +46,7 @@ class BHBooksListView: UIView {
         super.init(frame: frame)
         
         
-        print(String(describing: BHService.getBookDetailsRequest(with: "sherlock").url))
+//        print(String(describing: BHService.getBookDetailsRequest(with: "sherlock").url))
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubViews(collectionView, progressView)
@@ -72,10 +76,16 @@ class BHBooksListView: UIView {
             progressView.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
+    
+    
 
 }
 
 extension BHBooksListView: BHBookListViewViewModelDelegate{
+    func didLoadMoreBooks(with indexPaths: [IndexPath]) {
+        self.collectionView.insertItems(at: indexPaths)
+    }
+    
     func didSelectBook(_ book: BHBook) {
         delegate?.didSelectBook(book: book)
     }
@@ -90,8 +100,5 @@ extension BHBooksListView: BHBookListViewViewModelDelegate{
         }
         
     }
-    
-   
-    
-    
 }
+

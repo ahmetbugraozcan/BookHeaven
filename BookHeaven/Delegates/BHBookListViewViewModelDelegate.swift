@@ -11,4 +11,5 @@ import Foundation
 protocol BHBookListViewViewModelDelegate{
     func didLoadFirstBooks()
     func didSelectBook(_ book: BHBook)
+    func didLoadMoreBooks(with indexPaths: [IndexPath])
 }

@@ -22,10 +22,8 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
         view.backgroundColor = .systemBackground
         title = "Books"
         collectionView.delegate = self
+        
         view.addSubViews(collectionView)
-    
-        
-        
         addConstraints()
     }
 
@@ -37,5 +35,9 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
         ])
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("somescroll")
     }
 }

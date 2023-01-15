@@ -10,6 +10,7 @@
 		12125300296ECC3E0021AECC /* BHBooksDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121252FF296ECC3E0021AECC /* BHBooksDetailViewModel.swift */; };
 		123FB9E52973351A00DBD925 /* BHDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E42973351A00DBD925 /* BHDownloadButton.swift */; };
 		123FB9E72973430800DBD925 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E62973430800DBD925 /* URL+Extension.swift */; };
+		123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */; };
 		1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */; };
 		1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */; };
 		1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */; };
@@ -67,6 +68,7 @@
 		121252FF296ECC3E0021AECC /* BHBooksDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBooksDetailViewModel.swift; sourceTree = "<group>"; };
 		123FB9E42973351A00DBD925 /* BHDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHDownloadButton.swift; sourceTree = "<group>"; };
 		123FB9E62973430800DBD925 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHFooterLoadingView.swift; sourceTree = "<group>"; };
 		1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHTabBarController.swift; sourceTree = "<group>"; };
 		1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHLibraryViewController.swift; sourceTree = "<group>"; };
 		1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				12A50C6A2968EBDC0089478D /* AppDelegate.swift */,
 				12A50C6C2968EBDC0089478D /* SceneDelegate.swift */,
+				1255F41D296DACAD00313B2C /* BHBooksListViewDelegate.swift */,
 				1255F413296B80D300313B2C /* BHBookListViewViewModelDelegate.swift */,
 			);
 			path = Delegates;
@@ -260,10 +263,10 @@
 			children = (
 				1255F409296B794D00313B2C /* BHBooksListView.swift */,
 				1255F410296B7BAD00313B2C /* BHBooksCellView.swift */,
-				1255F41D296DACAD00313B2C /* BHBooksListViewDelegate.swift */,
 				12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */,
 				12FF9C942971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift */,
 				123FB9E42973351A00DBD925 /* BHDownloadButton.swift */,
+				123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */,
 				1255F3FA296AF7AF00313B2C /* BHBook.swift in Sources */,
 				1255F414296B80D300313B2C /* BHBookListViewViewModelDelegate.swift in Sources */,
+				123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */,
 				1255F403296AF8E200313B2C /* BHEndpoint.swift in Sources */,
 				1255F3FF296AF8CD00313B2C /* BHRequest.swift in Sources */,
 				12125300296ECC3E0021AECC /* BHBooksDetailViewModel.swift in Sources */,

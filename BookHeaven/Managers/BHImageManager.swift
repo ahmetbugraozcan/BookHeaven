@@ -25,7 +25,6 @@ final class BHImageManager {
         
         if let imageData = cache.object(forKey: imageLink as NSString){
             completion(.success(imageData as Data))
-            print("get from cache")
             return
         }
         
