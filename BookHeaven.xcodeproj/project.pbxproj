@@ -11,6 +11,8 @@
 		123FB9E52973351A00DBD925 /* BHDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E42973351A00DBD925 /* BHDownloadButton.swift */; };
 		123FB9E72973430800DBD925 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E62973430800DBD925 /* URL+Extension.swift */; };
 		123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */; };
+		123FB9EF29748D6300DBD925 /* BHBookModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9ED29748D6300DBD925 /* BHBookModel.xcdatamodeld */; };
+		123FB9F329749B4F00DBD925 /* BHPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9F229749B4F00DBD925 /* BHPersistentContainer.swift */; };
 		1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */; };
 		1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */; };
 		1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */; };
@@ -69,6 +71,8 @@
 		123FB9E42973351A00DBD925 /* BHDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHDownloadButton.swift; sourceTree = "<group>"; };
 		123FB9E62973430800DBD925 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHFooterLoadingView.swift; sourceTree = "<group>"; };
+		123FB9EE29748D6300DBD925 /* BHBookModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BHBookModel.xcdatamodel; sourceTree = "<group>"; };
+		123FB9F229749B4F00DBD925 /* BHPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHPersistentContainer.swift; sourceTree = "<group>"; };
 		1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHTabBarController.swift; sourceTree = "<group>"; };
 		1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHLibraryViewController.swift; sourceTree = "<group>"; };
 		1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123FB9F129749B3D00DBD925 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				123FB9F229749B4F00DBD925 /* BHPersistentContainer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		1255F3F6296AF53100313B2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 		12A50C5E2968EBDC0089478D = {
 			isa = PBXGroup;
 			children = (
+				123FB9ED29748D6300DBD925 /* BHBookModel.xcdatamodeld */,
 				12A50C692968EBDC0089478D /* BookHeaven */,
 				12A50C802968EBDD0089478D /* BookHeavenTests */,
 				12A50C8A2968EBDD0089478D /* BookHeavenUITests */,
@@ -206,6 +219,7 @@
 		12A50C692968EBDC0089478D /* BookHeaven */ = {
 			isa = PBXGroup;
 			children = (
+				123FB9F129749B3D00DBD925 /* CoreData */,
 				1255F417296C4DDC00313B2C /* Managers */,
 				1255F40D296B79E100313B2C /* ViewModels */,
 				1255F3FD296AF8C000313B2C /* APIClient */,
@@ -441,11 +455,13 @@
 				123FB9E52973351A00DBD925 /* BHDownloadButton.swift in Sources */,
 				1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */,
 				1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */,
+				123FB9EF29748D6300DBD925 /* BHBookModel.xcdatamodeld in Sources */,
 				1255F3FA296AF7AF00313B2C /* BHBook.swift in Sources */,
 				1255F414296B80D300313B2C /* BHBookListViewViewModelDelegate.swift in Sources */,
 				123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */,
 				1255F403296AF8E200313B2C /* BHEndpoint.swift in Sources */,
 				1255F3FF296AF8CD00313B2C /* BHRequest.swift in Sources */,
+				123FB9F329749B4F00DBD925 /* BHPersistentContainer.swift in Sources */,
 				12125300296ECC3E0021AECC /* BHBooksDetailViewModel.swift in Sources */,
 				1255F40A296B794D00313B2C /* BHBooksListView.swift in Sources */,
 				1255F401296AF8D900313B2C /* BHService.swift in Sources */,
@@ -808,6 +824,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		123FB9ED29748D6300DBD925 /* BHBookModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				123FB9EE29748D6300DBD925 /* BHBookModel.xcdatamodel */,
+			);
+			currentVersion = 123FB9EE29748D6300DBD925 /* BHBookModel.xcdatamodel */;
+			path = BHBookModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 12A50C5F2968EBDC0089478D /* Project object */;
 }

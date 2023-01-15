@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreData
 /// Controller that contains 4 main tab - Home, Library, Categories, Settings
 class BHTabBarController: UITabBarController {
     
@@ -15,8 +15,19 @@ class BHTabBarController: UITabBarController {
         setUpTabs()
     }
     
+    var container: NSPersistentContainer!
+    
+    init(container: NSPersistentContainer) {
+        self.container = container
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    
     func setUpTabs(){
-        let homeViewController = BHHomeViewController()
+        let homeViewController = BHHomeViewController(container: container)
         let libraryViewController = BHLibraryViewController()
         let categoriesController = BHCategoriesViewController()
         let settingsController = BHSettingsViewController()

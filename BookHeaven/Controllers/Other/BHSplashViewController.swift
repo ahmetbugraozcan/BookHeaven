@@ -6,10 +6,12 @@
 //
 
 import UIKit
-
+import CoreData
 /// Splash view which appears first launch of app
 class BHSplashViewController: UIViewController {
 
+    var container: NSPersistentContainer!
+    
     let loadingIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.hidesWhenStopped = true
@@ -20,6 +22,10 @@ class BHSplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard container != nil else {
+            fatalError("This view needs a persitent container")
+        }
+        
         view.backgroundColor = .systemBackground
         view.addSubview(loadingIndicator)
         navigationItem.title = "Splash"
@@ -45,7 +51,7 @@ class BHSplashViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
             
             let window = UIApplication.shared.keyWindow
-            window?.rootViewController = BHTabBarController()
+            window?.rootViewController = BHTabBarController(container: self.container)
             
         }
     }

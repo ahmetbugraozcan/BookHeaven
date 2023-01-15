@@ -6,17 +6,32 @@
 //
 
 import UIKit
+import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "BHBookModel")
+        container.loadPersistentStores { description, error in
+            if let error = error {
+                fatalError("Unable to load persistent store \(error)")
+            }
+        }
+        return container
+    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let viewController = UINavigationController(rootViewController: BHSplashViewController())
         window.rootViewController = viewController
+        
+        if let rootVC = viewController.viewControllers.first as? BHSplashViewController {
+            rootVC.container = persistentContainer
+        }
+        
         window.makeKeyAndVisible()
         self.window = window
     }
