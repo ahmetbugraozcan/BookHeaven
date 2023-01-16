@@ -35,7 +35,10 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
         let cdmanager = BHCoreDataManager()
         var data = cdmanager.fetch(BHBookCDModel.self)
         
-        print("data is \(String(describing: data.first?.testTitle))")
+        data.forEach { data in
+            print("data is \(String(describing: data.formats?.textPlain ?? "nil"))")
+        }
+        
 
         view.backgroundColor = .systemBackground
         title = "Books"

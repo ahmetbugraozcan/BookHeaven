@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BHAuthorCoreData" representedClassName="BHAuthorCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="birthYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deathYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="BHBookCDModel" representedClassName="BHBookCDModel" syncable="YES">
+        <attribute name="bookID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bookshelves" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="copyright" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="downloadCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="languages" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="subjects" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="testtitle" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="formats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BHFormatCoreData" inverseName="book" inverseEntity="BHFormatCoreData"/>
+    </entity>
+    <entity name="BHFormatCoreData" representedClassName="BHFormatCoreData" syncable="YES">
+        <attribute name="applicationEpubZip" optional="YES" attributeType="String"/>
+        <attribute name="applicationOctetStream" optional="YES" attributeType="String"/>
+        <attribute name="applicationRDFXML" optional="YES" attributeType="String"/>
+        <attribute name="applicationXMobipocketEbook" optional="YES" attributeType="String"/>
+        <attribute name="imageJPEG" optional="YES" attributeType="String"/>
+        <attribute name="textHTML" optional="YES" attributeType="String"/>
+        <attribute name="textPlain" optional="YES" attributeType="String"/>
+        <attribute name="textPlainCharsetUsASCII" optional="YES" attributeType="String"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BHBookCDModel" inverseName="formats" inverseEntity="BHBookCDModel"/>
+    </entity>
+</model>
