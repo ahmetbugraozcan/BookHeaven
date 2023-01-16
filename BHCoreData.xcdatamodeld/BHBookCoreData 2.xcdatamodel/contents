@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BHAuthorCoreData" representedClassName="BHAuthorCoreData" syncable="YES" codeGenerationType="class"/>
+    <entity name="BHBookCDModel" representedClassName="BHBookCDModel" syncable="YES">
+        <attribute name="bookID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bookshelves" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="copyright" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="downloadCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="languages" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="subjects" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="testtitle" optional="YES" attributeType="String"/>
+        <attribute name="testTitle" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="BHFormatCoreData" representedClassName="BHFormatCoreData" syncable="YES" codeGenerationType="class"/>
+</model>

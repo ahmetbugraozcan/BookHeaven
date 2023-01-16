@@ -49,8 +49,18 @@ class BHBookDetailsViewController: UIViewController{
         
         scrollView.addSubview(detailsView)
         view.addSubViews(scrollView, loadingView)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "heart.fill")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(testMethod))
         addConstraints()
         
+    }
+    
+    @objc func testMethod(){
+        viewModel.saveBookToCoreData()
     }
     
     func addConstraints(){
@@ -82,6 +92,7 @@ class BHBookDetailsViewController: UIViewController{
         detailsView.downloadCountLabel.text = "\(viewModel.book.downloadCount ?? 0) Downloads"
         
         detailsView.downloadButton.addTarget(self, action: #selector(onDownload) , for: .touchUpInside)
+        
         
         viewModel.getBookDetails{ [weak self] bookDetailsResponse in
             

@@ -28,6 +28,8 @@ struct BHBook: Codable, Identifiable {
 }
 
 extension BHBook {
+
+    
     func getLanguageReadableName() -> String{
         guard let language = self.languages?.first else {
             return "Unknown"
@@ -36,6 +38,7 @@ extension BHBook {
         return Locale.current.localizedString(forLanguageCode: language) ?? "Unknown"
     }
 }
+
 extension Array where Element == BHBook {
     func indexOfBooks(with id: BHBook.ID) -> Self.Index{
         guard let index = firstIndex(where: {$0.id == id}) else {

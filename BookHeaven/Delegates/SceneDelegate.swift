@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "BHBookModel")
+        let container = NSPersistentContainer(name: "BHCoreData")
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Unable to load persistent store \(error)")

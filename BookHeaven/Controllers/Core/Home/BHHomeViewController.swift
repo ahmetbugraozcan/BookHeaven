@@ -16,6 +16,7 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     init(container: NSPersistentContainer) {
         self.container = container
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -31,6 +32,10 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        let cdmanager = BHCoreDataManager()
+        var data = cdmanager.fetch(BHBookCDModel.self)
+        
+        print("data is \(String(describing: data.first?.testTitle))")
 
         view.backgroundColor = .systemBackground
         title = "Books"

@@ -9,6 +9,7 @@ import Foundation
 
 final class BHBooksDetailViewModel{
     var book: BHBook
+    let coreDataManager = BHCoreDataManager()
     
     init(_ book: BHBook) {
         self.book = book
@@ -33,5 +34,11 @@ final class BHBooksDetailViewModel{
                 print(String(describing: failure))
             }
         }
+    }
+    
+    func saveBookToCoreData(){
+        guard let bookModel = coreDataManager.add(BHBookCDModel.self) else {return}
+        bookModel.coreDataFromBHBook(with: book)
+        coreDataManager.saveContext()
     }
 }
