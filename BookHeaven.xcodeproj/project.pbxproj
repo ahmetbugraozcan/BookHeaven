@@ -13,10 +13,12 @@
 		123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB9E82974453400DBD925 /* BHFooterLoadingView.swift */; };
 		123FBA072975804400DBD925 /* BHCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA062975804400DBD925 /* BHCoreDataManager.swift */; };
 		123FBA3629759B4A00DBD925 /* BHCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA3429759B4A00DBD925 /* BHCoreData.xcdatamodeld */; };
-		123FBA792975F2A800DBD925 /* BHBookCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA752975F2A800DBD925 /* BHBookCDModel+CoreDataClass.swift */; };
-		123FBA7A2975F2A800DBD925 /* BHBookCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA762975F2A800DBD925 /* BHBookCDModel+CoreDataProperties.swift */; };
-		123FBA7B2975F2A800DBD925 /* BHFormatCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA772975F2A800DBD925 /* BHFormatCoreData+CoreDataClass.swift */; };
-		123FBA7C2975F2A800DBD925 /* BHFormatCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FBA782975F2A800DBD925 /* BHFormatCoreData+CoreDataProperties.swift */; };
+		124A4E242976BE4600CB9EB2 /* BHBookCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E1E2976BE4600CB9EB2 /* BHBookCDModel+CoreDataClass.swift */; };
+		124A4E252976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E1F2976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift */; };
+		124A4E262976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E202976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataClass.swift */; };
+		124A4E272976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E212976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift */; };
+		124A4E282976BE4600CB9EB2 /* BHFormatCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E222976BE4600CB9EB2 /* BHFormatCoreData+CoreDataClass.swift */; };
+		124A4E292976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E232976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift */; };
 		1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */; };
 		1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */; };
 		1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */; };
@@ -79,10 +81,12 @@
 		123FBA3529759B4A00DBD925 /* BHBookCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BHBookCoreData.xcdatamodel; sourceTree = "<group>"; };
 		123FBA732975E61600DBD925 /* BHBookCoreData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BHBookCoreData 2.xcdatamodel"; sourceTree = "<group>"; };
 		123FBA742975E88200DBD925 /* BHBookCoreData 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BHBookCoreData 3.xcdatamodel"; sourceTree = "<group>"; };
-		123FBA752975F2A800DBD925 /* BHBookCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHBookCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		123FBA762975F2A800DBD925 /* BHBookCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHBookCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		123FBA772975F2A800DBD925 /* BHFormatCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHFormatCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		123FBA782975F2A800DBD925 /* BHFormatCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHFormatCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		124A4E1E2976BE4600CB9EB2 /* BHBookCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHBookCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		124A4E1F2976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHBookCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		124A4E202976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHAuthorCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		124A4E212976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHAuthorCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		124A4E222976BE4600CB9EB2 /* BHFormatCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHFormatCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		124A4E232976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BHFormatCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHTabBarController.swift; sourceTree = "<group>"; };
 		1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHLibraryViewController.swift; sourceTree = "<group>"; };
 		1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -151,22 +155,88 @@
 		123FB9F42975598700DBD925 /* BHBook */ = {
 			isa = PBXGroup;
 			children = (
-				123FBA752975F2A800DBD925 /* BHBookCDModel+CoreDataClass.swift */,
-				123FBA762975F2A800DBD925 /* BHBookCDModel+CoreDataProperties.swift */,
-				123FBA772975F2A800DBD925 /* BHFormatCoreData+CoreDataClass.swift */,
-				123FBA782975F2A800DBD925 /* BHFormatCoreData+CoreDataProperties.swift */,
-				1255F3F9296AF7AF00313B2C /* BHBook.swift */,
+				123FBA902976B8B800DBD925 /* Domain */,
+				123FBA8F2976B8B300DBD925 /* Persistence */,
 			);
 			path = BHBook;
+			sourceTree = "<group>";
+		};
+		123FBA7D2976B73700DBD925 /* BHFormat */ = {
+			isa = PBXGroup;
+			children = (
+				123FBA8C2976B86C00DBD925 /* Persistence */,
+				123FBA8B2976B84A00DBD925 /* Domain */,
+			);
+			path = BHFormat;
+			sourceTree = "<group>";
+		};
+		123FBA8A2976B84200DBD925 /* BHAuthor */ = {
+			isa = PBXGroup;
+			children = (
+				123FBA8E2976B89200DBD925 /* Persistence */,
+				123FBA8D2976B88B00DBD925 /* Domain */,
+			);
+			path = BHAuthor;
+			sourceTree = "<group>";
+		};
+		123FBA8B2976B84A00DBD925 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1255F415296C4CCF00313B2C /* BHFormats.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		123FBA8C2976B86C00DBD925 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				124A4E222976BE4600CB9EB2 /* BHFormatCoreData+CoreDataClass.swift */,
+				124A4E232976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		123FBA8D2976B88B00DBD925 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1255F3FB296AF7C500313B2C /* BHAuthor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		123FBA8E2976B89200DBD925 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				124A4E202976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataClass.swift */,
+				124A4E212976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		123FBA8F2976B8B300DBD925 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				124A4E1E2976BE4600CB9EB2 /* BHBookCDModel+CoreDataClass.swift */,
+				124A4E1F2976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		123FBA902976B8B800DBD925 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1255F3F9296AF7AF00313B2C /* BHBook.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		1255F3F6296AF53100313B2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				123FBA7D2976B73700DBD925 /* BHFormat */,
 				123FB9F42975598700DBD925 /* BHBook */,
 				1255F3F7296AF53900313B2C /* BHAllBooksResponse.swift */,
-				1255F3FB296AF7C500313B2C /* BHAuthor.swift */,
-				1255F415296C4CCF00313B2C /* BHFormats.swift */,
+				123FBA8A2976B84200DBD925 /* BHAuthor */,
 				12D6B5AD297046AC00257DBD /* BHEBookDetail.swift */,
 				12D6B5AF2970478200257DBD /* BHBookDetailsResponse.swift */,
 			);
@@ -469,7 +539,8 @@
 				123FB9E52973351A00DBD925 /* BHDownloadButton.swift in Sources */,
 				1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */,
 				1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */,
-				123FBA792975F2A800DBD925 /* BHBookCDModel+CoreDataClass.swift in Sources */,
+				124A4E242976BE4600CB9EB2 /* BHBookCDModel+CoreDataClass.swift in Sources */,
+				124A4E262976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataClass.swift in Sources */,
 				1255F3FA296AF7AF00313B2C /* BHBook.swift in Sources */,
 				1255F414296B80D300313B2C /* BHBookListViewViewModelDelegate.swift in Sources */,
 				123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */,
@@ -477,22 +548,22 @@
 				123FBA072975804400DBD925 /* BHCoreDataManager.swift in Sources */,
 				1255F3FF296AF8CD00313B2C /* BHRequest.swift in Sources */,
 				12125300296ECC3E0021AECC /* BHBooksDetailViewModel.swift in Sources */,
+				124A4E292976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift in Sources */,
 				1255F40A296B794D00313B2C /* BHBooksListView.swift in Sources */,
 				1255F401296AF8D900313B2C /* BHService.swift in Sources */,
+				124A4E272976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift in Sources */,
 				1255F419296C4DEA00313B2C /* BHImageManager.swift in Sources */,
 				1255F408296B5A3E00313B2C /* BHHomeCollectionViewController.swift in Sources */,
 				12D6B5B02970478200257DBD /* BHBookDetailsResponse.swift in Sources */,
 				12A50C6B2968EBDC0089478D /* AppDelegate.swift in Sources */,
 				1255F40F296B7A0D00313B2C /* BHBooksListViewViewModel.swift in Sources */,
 				12FF9C952971F44D003186A6 /* BHBookPageAndLanguageInfoRow.swift in Sources */,
-				123FBA7B2975F2A800DBD925 /* BHFormatCoreData+CoreDataClass.swift in Sources */,
-				123FBA7C2975F2A800DBD925 /* BHFormatCoreData+CoreDataProperties.swift in Sources */,
 				1255F3F3296AF33F00313B2C /* BHSettingsViewController.swift in Sources */,
 				1255F416296C4CCF00313B2C /* BHFormats.swift in Sources */,
 				1255F3FC296AF7C500313B2C /* BHAuthor.swift in Sources */,
 				12D6B5AE297046AC00257DBD /* BHEBookDetail.swift in Sources */,
 				123FBA3629759B4A00DBD925 /* BHCoreData.xcdatamodeld in Sources */,
-				123FBA7A2975F2A800DBD925 /* BHBookCDModel+CoreDataProperties.swift in Sources */,
+				124A4E252976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift in Sources */,
 				1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */,
 				1255F420296DAED400313B2C /* BHBookDetailsController.swift in Sources */,
 				1255F411296B7BAD00313B2C /* BHBooksCellView.swift in Sources */,
@@ -500,6 +571,7 @@
 				123FB9E72973430800DBD925 /* URL+Extension.swift in Sources */,
 				1255F41E296DACAD00313B2C /* BHBooksListViewDelegate.swift in Sources */,
 				12FF9C93297055C2003186A6 /* BHBookDetailsView.swift in Sources */,
+				124A4E282976BE4600CB9EB2 /* BHFormatCoreData+CoreDataClass.swift in Sources */,
 				12F1452F2968F69D00234818 /* BHSplashViewController.swift in Sources */,
 				1255F3F8296AF53900313B2C /* BHAllBooksResponse.swift in Sources */,
 				12F145312968FEEF00234818 /* BHHomeViewController.swift in Sources */,

@@ -36,7 +36,7 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
         var data = cdmanager.fetch(BHBookCDModel.self)
         
         data.forEach { data in
-            print("data is \(String(describing: data.formats?.textPlain ?? "nil"))")
+            print("data is \(String(describing: data.authors?.count.description ?? "nil"))")
         }
         
 

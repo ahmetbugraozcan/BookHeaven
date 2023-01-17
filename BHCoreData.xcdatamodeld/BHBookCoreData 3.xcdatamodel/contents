@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="BHAuthorCoreData" representedClassName="BHAuthorCoreData" syncable="YES" codeGenerationType="class">
+    <entity name="BHAuthorCoreData" representedClassName="BHAuthorCoreData" syncable="YES">
         <attribute name="birthYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="deathYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="authors" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BHBookCDModel" inverseName="authors" inverseEntity="BHBookCDModel"/>
+        <relationship name="translators" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BHBookCDModel" inverseName="translators" inverseEntity="BHBookCDModel"/>
     </entity>
     <entity name="BHBookCDModel" representedClassName="BHBookCDModel" syncable="YES">
         <attribute name="bookID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -15,7 +17,9 @@
         <attribute name="subjects" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="testtitle" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BHAuthorCoreData" inverseName="authors" inverseEntity="BHAuthorCoreData"/>
         <relationship name="formats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BHFormatCoreData" inverseName="book" inverseEntity="BHFormatCoreData"/>
+        <relationship name="translators" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BHAuthorCoreData" inverseName="translators" inverseEntity="BHAuthorCoreData"/>
     </entity>
     <entity name="BHFormatCoreData" representedClassName="BHFormatCoreData" syncable="YES">
         <attribute name="applicationEpubZip" optional="YES" attributeType="String"/>
