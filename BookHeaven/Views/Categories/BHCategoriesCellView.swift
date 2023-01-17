@@ -7,7 +7,11 @@
 
 import UIKit
 
+
+
 class BHCategoriesCellView: UICollectionViewCell {
+    
+
     static let cellReuseIdentifier = "BHCategoriesCellView"
 
     var text: UILabel = {
@@ -20,8 +24,13 @@ class BHCategoriesCellView: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .red
+        
+        
+        
+        contentView.backgroundColor = UIColor(named: "BHCategoriesBGColor")
+        contentView.layer.cornerRadius = 12
         contentView.addSubViews(text)
+      
         addConstraints()
         
 
@@ -30,6 +39,11 @@ class BHCategoriesCellView: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("Not supported")
+    }
+    
+    
+    func onSelectCategory(category: BHCategory) {
+        print("asdkljashd")
     }
     
     func addConstraints(){

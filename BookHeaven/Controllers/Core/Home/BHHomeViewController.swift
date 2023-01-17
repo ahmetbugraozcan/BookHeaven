@@ -32,12 +32,12 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let cdmanager = BHCoreDataManager()
-        var data = cdmanager.fetch(BHBookCDModel.self)
-        
-        data.forEach { data in
-            print("data is \(String(describing: data.authors?.count.description ?? "nil"))")
-        }
+//        let cdmanager = BHCoreDataManager()
+//        var data = cdmanager.fetch(BHBookCDModel.self)
+//        
+//        data.forEach { data in
+//            print("data is \(String(describing: data.authors?.count.description ?? "nil"))")
+//        }
         
 
         view.backgroundColor = .systemBackground
@@ -58,7 +58,5 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
         ])
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("somescroll")
-    }
+
 }

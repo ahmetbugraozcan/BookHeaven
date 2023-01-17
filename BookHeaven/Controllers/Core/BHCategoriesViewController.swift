@@ -7,13 +7,22 @@
 
 import UIKit
 
-class BHCategoriesViewController: UIViewController {
+class BHCategoriesViewController: UIViewController, BHCategoriesCollectionViewDelegate {
+    
+
+    
+    func onSelectCategory(category: BHCategory) {
+        print("asdasdsa")
+        navigationController?.pushViewController(BHCategoryViewController(category: category), animated: true)
+    }
+    
 
     var bhCategoriesCollectionView = BHCategoriesCollectionView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        
+        title = "Categories"
+//        viewModel.delegate = self
+        bhCategoriesCollectionView.delegate = self
         view.addSubview(bhCategoriesCollectionView)
         addConstraints()
     }

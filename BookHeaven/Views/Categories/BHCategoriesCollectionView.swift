@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+
+
+
 final class BHCategoriesCollectionView: UIView {
     
-    var viewModel = BHCategoriesViewModel()
+    weak var delegate: BHCategoriesViewController?
+    
+    var viewModel = BHCategoriesListViewModel()
     
     var collectionView: UICollectionView = {
         var layout = UICollectionViewFlowLayout()
@@ -20,12 +25,15 @@ final class BHCategoriesCollectionView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(BHCategoriesCellView.self, forCellWithReuseIdentifier: BHCategoriesCellView.cellReuseIdentifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+
+        
         return collectionView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
+        viewModel.delegate = self
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
         addSubViews(collectionView)
@@ -45,4 +53,12 @@ final class BHCategoriesCollectionView: UIView {
     required init?(coder: NSCoder) {
         fatalError("Not supported")
     }
+}
+
+extension BHCategoriesCollectionView: BHCategoriesCollectionViewDelegate {
+    func onSelectCategory(category: BHCategory) {
+        self.delegate?.onSelectCategory(category: category)
+    }
+    
+    
 }
