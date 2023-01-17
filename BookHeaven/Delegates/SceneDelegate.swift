@@ -30,15 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let rootVC = viewController.viewControllers.first as? BHSplashViewController {
             rootVC.container = persistentContainer
-
-            let path = NSPersistentContainer
-                .defaultDirectoryURL()
-                .absoluteString
-                .replacingOccurrences(of: "file://", with: "")
-                .removingPercentEncoding
-
-            print(path ?? "Not found")
-            
         }
         
         window.makeKeyAndVisible()

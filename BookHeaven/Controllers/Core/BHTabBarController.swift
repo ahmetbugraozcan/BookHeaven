@@ -50,8 +50,9 @@ class BHTabBarController: UITabBarController {
         
         setViewControllers([
             navHome,
-            navLib,
             navCat,
+            navLib,
+            
             navSettings
         ], animated: true)
     }

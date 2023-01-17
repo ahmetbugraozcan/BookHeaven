@@ -9,22 +9,25 @@ import UIKit
 
 class BHCategoriesViewController: UIViewController {
 
+    var bhCategoriesCollectionView = BHCategoriesCollectionView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .blue
         
-        // Do any additional setup after loading the view.
+        view.addSubview(bhCategoriesCollectionView)
+        addConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func addConstraints(){
+        NSLayoutConstraint.activate([
+            bhCategoriesCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            bhCategoriesCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            bhCategoriesCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            bhCategoriesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
     }
-    */
+    
+    
+
 
 }
