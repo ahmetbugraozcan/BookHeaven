@@ -36,6 +36,7 @@ final class BHCategoriesCollectionView: UIView {
         viewModel.delegate = self
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
+    
         addSubViews(collectionView)
         addConstraints()
     }

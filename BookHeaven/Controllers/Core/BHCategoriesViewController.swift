@@ -8,12 +8,9 @@
 import UIKit
 
 class BHCategoriesViewController: UIViewController, BHCategoriesCollectionViewDelegate {
-    
 
-    
     func onSelectCategory(category: BHCategory) {
-        print("asdasdsa")
-        navigationController?.pushViewController(BHCategoryViewController(category: category), animated: true)
+        navigationController?.pushViewController(BHCategoryDetailsCollectionViewController(category: category), animated: true)
     }
     
 
@@ -21,7 +18,7 @@ class BHCategoriesViewController: UIViewController, BHCategoriesCollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Categories"
-//        viewModel.delegate = self
+
         bhCategoriesCollectionView.delegate = self
         view.addSubview(bhCategoriesCollectionView)
         addConstraints()

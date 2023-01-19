@@ -12,7 +12,7 @@ import UIKit
 final class BHCategoriesListViewModel: NSObject{
     let categories = BHCategory.categories
     weak var delegate: BHCategoriesCollectionView?
-    
+
 }
 
 

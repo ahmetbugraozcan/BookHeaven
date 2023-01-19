@@ -55,6 +55,12 @@ extension BHService{
     
     static let getBooksRequest = BHRequest(endPoint: .books)
     
+    static func getBookCategoryRequest(with category: BHCategory) -> BHRequest {
+        return BHRequest(endPoint: .books, queryParameters: [
+            URLQueryItem(name: "topic", value: category.requestString)
+         ], requestEndPointType: .gutendex)
+    }
+    
     static func getBookDetailsRequest(with query: String) -> BHRequest {
         var apiKey: String? = nil
         if let path = Bundle.main.path(forResource: "Keys", ofType: "plist"){

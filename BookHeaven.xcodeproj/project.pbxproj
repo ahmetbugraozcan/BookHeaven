@@ -25,7 +25,7 @@
 		124A4E352976EBD800CB9EB2 /* BHCategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E342976EBD800CB9EB2 /* BHCategoriesCellView.swift */; };
 		124A4E372977349100CB9EB2 /* BHCategoriesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E362977349100CB9EB2 /* BHCategoriesCollectionViewDelegate.swift */; };
 		124A4E3B2977383F00CB9EB2 /* BHCategoriesCVControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E3A2977383F00CB9EB2 /* BHCategoriesCVControllerDelegate.swift */; };
-		124A4E3D297739E000CB9EB2 /* BHCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E3C297739E000CB9EB2 /* BHCategoryViewController.swift */; };
+		124A4E3D297739E000CB9EB2 /* BHCategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A4E3C297739E000CB9EB2 /* BHCategoryDetailsViewController.swift */; };
 		1255F3ED296AEC0D00313B2C /* BHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */; };
 		1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */; };
 		1255F3F1296AF25300313B2C /* BHCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */; };
@@ -52,6 +52,9 @@
 		12A50C822968EBDD0089478D /* BookHeavenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A50C812968EBDD0089478D /* BookHeavenTests.swift */; };
 		12A50C8C2968EBDD0089478D /* BookHeavenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A50C8B2968EBDD0089478D /* BookHeavenUITests.swift */; };
 		12A50C8E2968EBDD0089478D /* BookHeavenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A50C8D2968EBDD0089478D /* BookHeavenUITestsLaunchTests.swift */; };
+		12C130BF29793D28009F2DD0 /* BHCategoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C130BE29793D28009F2DD0 /* BHCategoryDetailsViewModel.swift */; };
+		12C130C2297953C5009F2DD0 /* BHCategoryDetailsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C130C1297953C5009F2DD0 /* BHCategoryDetailsCollectionView.swift */; };
+		12C130C529796181009F2DD0 /* BHCategoryDetailsCollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C130C429796181009F2DD0 /* BHCategoryDetailsCollectionViewControllerDelegate.swift */; };
 		12D6B5AE297046AC00257DBD /* BHEBookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6B5AD297046AC00257DBD /* BHEBookDetail.swift */; };
 		12D6B5B02970478200257DBD /* BHBookDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6B5AF2970478200257DBD /* BHBookDetailsResponse.swift */; };
 		12D6B5B2297048AC00257DBD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12D6B5B1297048AC00257DBD /* Keys.plist */; };
@@ -99,7 +102,7 @@
 		124A4E342976EBD800CB9EB2 /* BHCategoriesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesCellView.swift; sourceTree = "<group>"; };
 		124A4E362977349100CB9EB2 /* BHCategoriesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		124A4E3A2977383F00CB9EB2 /* BHCategoriesCVControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesCVControllerDelegate.swift; sourceTree = "<group>"; };
-		124A4E3C297739E000CB9EB2 /* BHCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoryViewController.swift; sourceTree = "<group>"; };
+		124A4E3C297739E000CB9EB2 /* BHCategoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoryDetailsViewController.swift; sourceTree = "<group>"; };
 		1255F3EC296AEC0D00313B2C /* BHTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHTabBarController.swift; sourceTree = "<group>"; };
 		1255F3EE296AF24300313B2C /* BHLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHLibraryViewController.swift; sourceTree = "<group>"; };
 		1255F3F0296AF25300313B2C /* BHCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +132,9 @@
 		12A50C872968EBDD0089478D /* BookHeavenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookHeavenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A50C8B2968EBDD0089478D /* BookHeavenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeavenUITests.swift; sourceTree = "<group>"; };
 		12A50C8D2968EBDD0089478D /* BookHeavenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeavenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12C130BE29793D28009F2DD0 /* BHCategoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		12C130C1297953C5009F2DD0 /* BHCategoryDetailsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoryDetailsCollectionView.swift; sourceTree = "<group>"; };
+		12C130C429796181009F2DD0 /* BHCategoryDetailsCollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHCategoryDetailsCollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		12D6B5AD297046AC00257DBD /* BHEBookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHEBookDetail.swift; sourceTree = "<group>"; };
 		12D6B5AF2970478200257DBD /* BHBookDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailsResponse.swift; sourceTree = "<group>"; };
 		12D6B5B1297048AC00257DBD /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
@@ -327,6 +333,7 @@
 				1255F40E296B7A0D00313B2C /* BHBooksListViewViewModel.swift */,
 				121252FF296ECC3E0021AECC /* BHBooksDetailViewModel.swift */,
 				124A4E2F2976DF8F00CB9EB2 /* BHCategoriesListViewModel.swift */,
+				12C130BE29793D28009F2DD0 /* BHCategoryDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -395,6 +402,22 @@
 			path = BookHeavenUITests;
 			sourceTree = "<group>";
 		};
+		12C130C0297953AA009F2DD0 /* CategoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				12C130C1297953C5009F2DD0 /* BHCategoryDetailsCollectionView.swift */,
+			);
+			path = CategoryDetails;
+			sourceTree = "<group>";
+		};
+		12C130C32979616F009F2DD0 /* CategoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				12C130C429796181009F2DD0 /* BHCategoryDetailsCollectionViewControllerDelegate.swift */,
+			);
+			path = CategoryDetails;
+			sourceTree = "<group>";
+		};
 		12F145212968F42200234818 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +433,7 @@
 			children = (
 				12A50C6A2968EBDC0089478D /* AppDelegate.swift */,
 				12A50C6C2968EBDC0089478D /* SceneDelegate.swift */,
+				12C130C32979616F009F2DD0 /* CategoryDetails */,
 				124A4E382977381C00CB9EB2 /* Home */,
 				124A4E392977382600CB9EB2 /* Categories */,
 			);
@@ -419,6 +443,7 @@
 		12F145232968F43D00234818 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C130C0297953AA009F2DD0 /* CategoryDetails */,
 				124A4E2C2976DD8300CB9EB2 /* Categories */,
 				124A4E2A2976DD6000CB9EB2 /* Home */,
 				124A4E2B2976DD7100CB9EB2 /* Details */,
@@ -452,7 +477,7 @@
 			children = (
 				12F1452E2968F69D00234818 /* BHSplashViewController.swift */,
 				1255F41F296DAED400313B2C /* BHBookDetailsController.swift */,
-				124A4E3C297739E000CB9EB2 /* BHCategoryViewController.swift */,
+				124A4E3C297739E000CB9EB2 /* BHCategoryDetailsViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -605,16 +630,18 @@
 				123FB9E92974453400DBD925 /* BHFooterLoadingView.swift in Sources */,
 				1255F403296AF8E200313B2C /* BHEndpoint.swift in Sources */,
 				123FBA072975804400DBD925 /* BHCoreDataManager.swift in Sources */,
-				124A4E3D297739E000CB9EB2 /* BHCategoryViewController.swift in Sources */,
+				124A4E3D297739E000CB9EB2 /* BHCategoryDetailsViewController.swift in Sources */,
 				1255F3FF296AF8CD00313B2C /* BHRequest.swift in Sources */,
 				12125300296ECC3E0021AECC /* BHBooksDetailViewModel.swift in Sources */,
 				124A4E372977349100CB9EB2 /* BHCategoriesCollectionViewDelegate.swift in Sources */,
 				124A4E292976BE4600CB9EB2 /* BHFormatCoreData+CoreDataProperties.swift in Sources */,
+				12C130C2297953C5009F2DD0 /* BHCategoryDetailsCollectionView.swift in Sources */,
 				1255F40A296B794D00313B2C /* BHBooksListView.swift in Sources */,
 				1255F401296AF8D900313B2C /* BHService.swift in Sources */,
 				124A4E272976BE4600CB9EB2 /* BHAuthorCoreData+CoreDataProperties.swift in Sources */,
 				124A4E352976EBD800CB9EB2 /* BHCategoriesCellView.swift in Sources */,
 				1255F419296C4DEA00313B2C /* BHImageManager.swift in Sources */,
+				12C130C529796181009F2DD0 /* BHCategoryDetailsCollectionViewControllerDelegate.swift in Sources */,
 				12D6B5B02970478200257DBD /* BHBookDetailsResponse.swift in Sources */,
 				124A4E302976DF8F00CB9EB2 /* BHCategoriesListViewModel.swift in Sources */,
 				12A50C6B2968EBDC0089478D /* AppDelegate.swift in Sources */,
@@ -631,6 +658,7 @@
 				1255F420296DAED400313B2C /* BHBookDetailsController.swift in Sources */,
 				1255F411296B7BAD00313B2C /* BHBooksCellView.swift in Sources */,
 				12A50C6D2968EBDC0089478D /* SceneDelegate.swift in Sources */,
+				12C130BF29793D28009F2DD0 /* BHCategoryDetailsViewModel.swift in Sources */,
 				123FB9E72973430800DBD925 /* URL+Extension.swift in Sources */,
 				1255F41E296DACAD00313B2C /* BHBooksListViewDelegate.swift in Sources */,
 				124A4E332976E04800CB9EB2 /* BHCategory.swift in Sources */,

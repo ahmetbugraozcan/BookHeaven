@@ -41,11 +41,7 @@ class BHCategoriesCellView: UICollectionViewCell {
         fatalError("Not supported")
     }
     
-    
-    func onSelectCategory(category: BHCategory) {
-        print("asdkljashd")
-    }
-    
+  
     func addConstraints(){
         NSLayoutConstraint.activate([
             text.centerXAnchor.constraint(equalTo: centerXAnchor),
