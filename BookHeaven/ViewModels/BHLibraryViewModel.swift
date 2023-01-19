@@ -17,7 +17,7 @@ class BHLibraryViewModel: NSObject{
 //        self.container = container
 //    }
 //
-    
+    weak var delegate: BHLibraryViewControllerDelegate?
     
     func getBooksFromCoreData(){
         let cdManager = BHCoreDataManager()
@@ -49,6 +49,10 @@ extension BHLibraryViewModel: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width - 20, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectBook(with: libraryItems[indexPath.row])
     }
 }
 

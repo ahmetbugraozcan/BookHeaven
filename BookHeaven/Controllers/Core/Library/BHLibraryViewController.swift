@@ -8,7 +8,12 @@
 import UIKit
 import CoreData
 
-class BHLibraryViewController: UIViewController {
+class BHLibraryViewController: UIViewController, BHLibraryViewControllerDelegate {
+    func didSelectBook(with book: BHBook) {
+        let viewModel = BHBooksDetailViewModel(book)
+        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: viewModel), animated: true)
+    }
+    
     
     var viewModel = BHLibraryViewModel()
     let collectionView = {
@@ -22,6 +27,7 @@ class BHLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         view.backgroundColor = .systemBackground
         //        view.translatesAutoresizingMaskIntoConstraints = false
         viewModel.getBooksFromCoreData()
@@ -43,3 +49,6 @@ class BHLibraryViewController: UIViewController {
     
 }
 
+protocol BHLibraryViewControllerDelegate: AnyObject{
+    func didSelectBook(with book: BHBook)
+}
