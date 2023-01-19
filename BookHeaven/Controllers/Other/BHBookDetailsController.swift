@@ -88,7 +88,7 @@ class BHBookDetailsViewController: UIViewController{
     func configure(with book: BHBook){
         detailsView.labelTitle.text = viewModel.book.title
         
-        detailsView.authorLabel.text = viewModel.book.authors?.first?.name
+        detailsView.authorLabel.text = viewModel.book.authors?.first??.name
         detailsView.downloadCountLabel.text = "\(viewModel.book.downloadCount ?? 0) Downloads"
         
         detailsView.downloadButton.addTarget(self, action: #selector(onDownload) , for: .touchUpInside)

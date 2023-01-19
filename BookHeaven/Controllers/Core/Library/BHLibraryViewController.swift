@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class BHLibraryViewController: UIViewController {
-
+    
+    var viewModel = BHLibraryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
+        viewModel.getBooksFromCoreData()
+        title = "Library"
     }
 
 

@@ -137,7 +137,7 @@ final class BHBooksCellView: UICollectionViewCell {
     
     func configure(with book: BHBook) {
         self.nameLabel.text = book.title
-        self.authorLabel.text = book.authors?.first?.name
+        self.authorLabel.text = book.authors?.first??.name
         self.subjectLabel.text = book.subjects?.first ?? ""
         self.languageLabel.text = book.getLanguageReadableName()
         BHImageManager.shared.downloadImage(with: book.formats.imageJPEG) { result in

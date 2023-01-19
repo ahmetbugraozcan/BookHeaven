@@ -95,18 +95,18 @@ extension BHBookCDModel {
         
        
             book.authors?.forEach({ bookAuthor in
-                guard let author = coreDataManager.add(BHAuthorCoreData.self) else {return}
-                author.name = bookAuthor.name
-                author.deathYear = Int16(bookAuthor.deathYear ?? 0)
-                author.birthYear = Int16(bookAuthor.birthYear ?? 0)
+                guard let author = coreDataManager.add(BHAuthorCoreData.self), bookAuthor != nil else {return}
+                author.name = bookAuthor!.name
+                author.deathYear = Int16(bookAuthor!.deathYear ?? 0)
+                author.birthYear = Int16(bookAuthor!.birthYear ?? 0)
                 self.addToAuthors(author)
             })
             
             book.translators?.forEach({ bookAuthor in
-                guard let author = coreDataManager.add(BHAuthorCoreData.self) else {return}
-                author.name = bookAuthor.name
-                author.deathYear = Int16(bookAuthor.deathYear ?? 0)
-                author.birthYear = Int16(bookAuthor.birthYear ?? 0)
+                guard let author = coreDataManager.add(BHAuthorCoreData.self), bookAuthor != nil else {return}
+                author.name = bookAuthor!.name
+                author.deathYear = Int16(bookAuthor!.deathYear ?? 0)
+                author.birthYear = Int16(bookAuthor!.birthYear ?? 0)
                 self.addToAuthors(author)
             })
         

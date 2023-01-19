@@ -13,7 +13,7 @@ struct BHBook: Codable, Identifiable {
     let id: String = UUID().uuidString
     let formats: BHFormats
     let title: String?
-    let authors, translators: [BHAuthor]?
+    let authors, translators: [BHAuthor?]?
     let subjects, bookshelves: [String]?
     let languages: [String]?
     let copyright: Bool?
@@ -36,6 +36,39 @@ extension BHBook {
         }
         
         return Locale.current.localizedString(forLanguageCode: language) ?? "Unknown"
+    }
+    
+    static func convertCoreDataBookToDomainBook(with book: BHBookCDModel) -> Self {
+        
+        let title = book.title
+        let bookID = book.bookID
+        let bookshelves = book.bookshelves
+        let downloadCount = book.downloadCount
+        let copyright = book.copyright
+        let id = book.id
+        let languages = book.languages
+        let subjects = book.subjects
+        let translators:[BHAuthor?] = book.translators!.compactMap({ translator in
+            guard let translator = translator as? BHAuthorCoreData else {
+                return nil
+            }
+            let translatorElement = BHAuthor(name: translator.name, birthYear: Int(translator.birthYear), deathYear: Int(translator.deathYear))
+            return translatorElement
+        })
+        
+        let authors:[BHAuthor?] = book.authors!.compactMap({ translator in
+            guard let translator = translator as? BHAuthorCoreData else {
+                return nil
+            }
+            let translatorElement = BHAuthor(name: translator.name, birthYear: Int(translator.birthYear), deathYear: Int(translator.deathYear))
+            return translatorElement
+        })
+        
+        let format = BHFormats(textPlain: book.formats?.textPlain, applicationXMobipocketEbook: book.formats?.applicationXMobipocketEbook, textHTML: book.formats?.textHTML, applicationOctetStream: book.formats?.applicationOctetStream, textPlainCharsetUsASCII: book.formats?.textPlainCharsetUsASCII, applicationEpubZip: book.formats?.applicationEpubZip, imageJPEG: book.formats?.imageJPEG, applicationRDFXML: book.formats?.applicationRDFXML)
+        
+        let book = BHBook(bookID: Int(bookID), formats: format, title: title, authors: authors, translators: translators, subjects: subjects, bookshelves: bookshelves, languages: languages, copyright: copyright, downloadCount: Int(downloadCount))
+        
+        return book
     }
 }
 

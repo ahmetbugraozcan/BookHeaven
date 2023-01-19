@@ -32,14 +32,6 @@ final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        let cdmanager = BHCoreDataManager()
-//        var data = cdmanager.fetch(BHBookCDModel.self)
-//        
-//        data.forEach { data in
-//            print("data is \(String(describing: data.authors?.count.description ?? "nil"))")
-//        }
-        
-
         view.backgroundColor = .systemBackground
         title = "Books"
         collectionView.delegate = self
