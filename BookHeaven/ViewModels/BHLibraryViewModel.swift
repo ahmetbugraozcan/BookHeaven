@@ -7,8 +7,9 @@
 
 import Foundation
 import CoreData
+import UIKit
 
-class BHLibraryViewModel{
+class BHLibraryViewModel: NSObject{
     var libraryItems: [BHBook] = []
 //    var container: NSPersistentContainer!
 //
@@ -22,13 +23,32 @@ class BHLibraryViewModel{
         let cdManager = BHCoreDataManager()
         let data = cdManager.fetch(BHBookCDModel.self)
         
-        data.forEach { bookCDModel in
+        libraryItems.append(contentsOf:  data.compactMap { bookCDModel in
             let book = BHBook.convertCoreDataBookToDomainBook(with: bookCDModel)
-            print("data is \(book.title)")
-        }
+            return book
+        })
+ 
     }
     
-    
-    
-    
 }
+
+extension BHLibraryViewModel: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return libraryItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BHBooksCellView.cellIdentifier, for: indexPath) as? BHBooksCellView else {
+            fatalError("Unsupported cell ")
+        }
+        
+        cell.configure(with: libraryItems[indexPath.row])
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width - 20, height: 150)
+    }
+}
+

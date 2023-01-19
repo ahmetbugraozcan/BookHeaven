@@ -45,8 +45,6 @@ class BHBooksListView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
-//        print(String(describing: BHService.getBookDetailsRequest(with: "sherlock").url))
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubViews(collectionView, progressView)

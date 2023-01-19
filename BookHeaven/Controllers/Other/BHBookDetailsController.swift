@@ -135,8 +135,7 @@ class BHBookDetailsViewController: UIViewController{
         self.detailsView.downloadButton.isLoading = true
         let alarm = URL(string: file)!
         do {
-          
-            
+
             try alarm.download(to: .documentDirectory, overwrite: true) { url, error in
                 DispatchQueue.main.async {
                     guard error == nil else {
