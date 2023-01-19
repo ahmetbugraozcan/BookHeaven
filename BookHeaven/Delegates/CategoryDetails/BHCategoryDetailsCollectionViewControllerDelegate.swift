@@ -10,4 +10,5 @@ import Foundation
 protocol BHCategoryDetailsCollectionViewControllerDelegate: AnyObject {
     func categoryDidLoadFirstBooks()
     func onSelectBook(book: BHBook)
+    func didLoadNextBooks(indexPaths: [IndexPath])
 }

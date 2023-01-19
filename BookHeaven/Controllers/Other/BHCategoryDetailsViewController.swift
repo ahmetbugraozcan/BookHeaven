@@ -9,6 +9,10 @@ import UIKit
 
 
 class BHCategoryDetailsCollectionViewController: UIViewController, BHCategoryDetailsCollectionViewControllerDelegate {
+    func didLoadNextBooks(indexPaths: [IndexPath]) {
+        self.categoriesList.collectionView.insertItems(at: indexPaths)
+    }
+    
     func onSelectBook(book: BHBook) {
         let viewModel = BHBooksDetailViewModel(book)
         navigationController?.pushViewController(BHBookDetailsViewController(viewModel: viewModel), animated: true)

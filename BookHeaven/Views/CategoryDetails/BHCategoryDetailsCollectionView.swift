@@ -30,6 +30,7 @@ class BHCategoryDetailsCollectionView: UIView {
         cv.isHidden = true
         
         cv.register(BHBooksCellView.self, forCellWithReuseIdentifier: BHBooksCellView.cellIdentifier)
+        cv.register(BHFooterLoadingView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: BHFooterLoadingView.identifier)
         
         return cv
     }()
@@ -40,6 +41,7 @@ class BHCategoryDetailsCollectionView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = viewModel
         collectionView.dataSource = viewModel
+        
         addSubViews(collectionView, progressView)
         addConstraints()
     }
