@@ -7,7 +7,11 @@
 
 import UIKit
 
-class BHBookDetailsViewController: UIViewController{
+class BHBookDetailsViewController: UIViewController, BHBookDetailControllerDelegate{
+    func didChangeFavoriteStatus() {
+        navigationItem.rightBarButtonItem = viewModel.isInFavorites ? removeFromFavoritesButton() : addToFavoritesButton()
+    }
+    
     
     var viewModel: BHBooksDetailViewModel
     
@@ -35,6 +39,7 @@ class BHBookDetailsViewController: UIViewController{
         detailsView.alpha = 0
         //        detailsView.backgroundColor = .blue
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -50,18 +55,30 @@ class BHBookDetailsViewController: UIViewController{
         scrollView.addSubview(detailsView)
         view.addSubViews(scrollView, loadingView)
         
-        viewModel.checkIsBookInFavorites()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "heart.fill")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
-            style: .plain,
-            target: self,
-            action: #selector(addBookToFavorites))
+        
+        navigationItem.rightBarButtonItem = viewModel.checkIsBookInFavorites() ? removeFromFavoritesButton() : addToFavoritesButton()
         addConstraints()
         
     }
     
     @objc func addBookToFavorites(){
         viewModel.saveBookToCoreData()
+    }
+    
+    func addToFavoritesButton() -> UIBarButtonItem{
+        return UIBarButtonItem(
+            image: UIImage(systemName: "heart")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(addBookToFavorites))
+    }
+    
+    func removeFromFavoritesButton() -> UIBarButtonItem{
+        return UIBarButtonItem(
+            image: UIImage(systemName: "heart.fill")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(addBookToFavorites))
     }
     
     func addConstraints(){

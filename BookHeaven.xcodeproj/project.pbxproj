@@ -60,6 +60,7 @@
 		12D6B5AE297046AC00257DBD /* BHEBookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6B5AD297046AC00257DBD /* BHEBookDetail.swift */; };
 		12D6B5B02970478200257DBD /* BHBookDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6B5AF2970478200257DBD /* BHBookDetailsResponse.swift */; };
 		12D6B5B2297048AC00257DBD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12D6B5B1297048AC00257DBD /* Keys.plist */; };
+		12EA6427297C347F00BA5498 /* BHBookDetailControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA6426297C347F00BA5498 /* BHBookDetailControllerDelegate.swift */; };
 		12F1452F2968F69D00234818 /* BHSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1452E2968F69D00234818 /* BHSplashViewController.swift */; };
 		12F145312968FEEF00234818 /* BHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F145302968FEEF00234818 /* BHHomeViewController.swift */; };
 		12FF9C93297055C2003186A6 /* BHBookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */; };
@@ -142,6 +143,7 @@
 		12D6B5AD297046AC00257DBD /* BHEBookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHEBookDetail.swift; sourceTree = "<group>"; };
 		12D6B5AF2970478200257DBD /* BHBookDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailsResponse.swift; sourceTree = "<group>"; };
 		12D6B5B1297048AC00257DBD /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		12EA6426297C347F00BA5498 /* BHBookDetailControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailControllerDelegate.swift; sourceTree = "<group>"; };
 		12F1452E2968F69D00234818 /* BHSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHSplashViewController.swift; sourceTree = "<group>"; };
 		12F145302968FEEF00234818 /* BHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHHomeViewController.swift; sourceTree = "<group>"; };
 		12FF9C92297055C2003186A6 /* BHBookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBookDetailsView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,14 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		12EA6425297C346E00BA5498 /* BookDetails */ = {
+			isa = PBXGroup;
+			children = (
+				12EA6426297C347F00BA5498 /* BHBookDetailControllerDelegate.swift */,
+			);
+			path = BookDetails;
+			sourceTree = "<group>";
+		};
 		12F145212968F42200234818 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +470,7 @@
 		12F145222968F42E00234818 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				12EA6425297C346E00BA5498 /* BookDetails */,
 				12A50C6A2968EBDC0089478D /* AppDelegate.swift */,
 				12A50C6C2968EBDC0089478D /* SceneDelegate.swift */,
 				12C130C32979616F009F2DD0 /* CategoryDetails */,
@@ -686,6 +697,7 @@
 				124A4E252976BE4600CB9EB2 /* BHBookCDModel+CoreDataProperties.swift in Sources */,
 				1255F3EF296AF24300313B2C /* BHLibraryViewController.swift in Sources */,
 				1255F420296DAED400313B2C /* BHBookDetailsController.swift in Sources */,
+				12EA6427297C347F00BA5498 /* BHBookDetailControllerDelegate.swift in Sources */,
 				1255F411296B7BAD00313B2C /* BHBooksCellView.swift in Sources */,
 				12A50C6D2968EBDC0089478D /* SceneDelegate.swift in Sources */,
 				12C130CB29799F88009F2DD0 /* BHLibraryViewModel.swift in Sources */,

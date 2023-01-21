@@ -9,8 +9,9 @@ import Foundation
 
 final class BHBooksDetailViewModel{
     var book: BHBook
+    var isInFavorites: Bool = false
     let coreDataManager = BHCoreDataManager.shared
-    
+    var delegate: BHBookDetailControllerDelegate?
     init(_ book: BHBook) {
         self.book = book
     }
@@ -36,19 +37,28 @@ final class BHBooksDetailViewModel{
         }
     }
     
-    func checkIsBookInFavorites(){
+    func checkIsBookInFavorites() -> Bool {
         guard let bookModel = coreDataManager.fetchItemByCustomId(expected: BHBookCDModel.self, with: book.bookID, whereField: "bookID") else {
             print("NOT IN FAVORITES")
-            return
+            isInFavorites = false
+            return isInFavorites
         }
         
         print("IN FAVORITES \(bookModel.title)")
+        isInFavorites = true
+        return isInFavorites
+    }
+    
+    func removeFromFavorites() {
         
     }
     
     func saveBookToCoreData(){
         guard let bookModel = coreDataManager.add(BHBookCDModel.self) else {return}
         bookModel.coreDataFromBHBook(with: book)
+        isInFavorites = true
+        delegate?.didChangeFavoriteStatus()
         coreDataManager.saveContext()
     }
 }
+
