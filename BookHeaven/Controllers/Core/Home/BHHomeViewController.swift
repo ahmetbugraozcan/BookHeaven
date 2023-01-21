@@ -11,18 +11,7 @@ import CoreData
 /// View that contains list of Book
 final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     
-    var container: NSPersistentContainer!
-    
-    init(container: NSPersistentContainer) {
-        self.container = container
-        super.init(nibName: nil, bundle: nil)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("unsupported")
-    }
-    
+
     func didSelectBook(book: BHBook) {
         navigationController?.pushViewController(BHBookDetailsViewController(viewModel: BHBooksDetailViewModel(book)), animated: true)
     }

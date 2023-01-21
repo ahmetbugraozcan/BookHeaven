@@ -9,10 +9,26 @@ import Foundation
 import CoreData
 import UIKit
 
-class BHCoreDataManager{
+final class BHCoreDataManager{
+    private struct FetchRequest<T>{
+        let type: T.Type
+        let id: Int
+        let field: String
+    }
+    
+    static let shared = BHCoreDataManager()
+    
+//    private init(){
+//        var results = fetch(BHBookCDModel.self)
+//
+//        results.forEach { bhbookmodel in
+//            print("bookmodel title is \(bhbookmodel.id)")
+//        }
+//    }
+//
     private let viewContext = (UIApplication.shared.connectedScenes
         .first!.delegate as! SceneDelegate).persistentContainer.viewContext
-    
+
     func fetch<T: NSManagedObject>(_ type: T.Type) -> [T] {
         let request = T.fetchRequest()
         do{
@@ -32,11 +48,38 @@ class BHCoreDataManager{
         
     }
     
+    func fetchItemByCustomId<T: NSManagedObject>(expected type: T.Type, with id: Int?, whereField: String) -> T?{
+        guard let id = id else {return nil}
+        let fetch = T.fetchRequest()
+        let predicate = NSPredicate(format: "\(whereField) == %i", id)
+        fetch.predicate = predicate
+        fetch.fetchLimit = 1
+
+        do{
+             viewContext.reset()
+            
+
+            let result = try viewContext.fetch(fetch)
+ 
+            for data in result as! [NSManagedObject] {
+                 print(data.value(forKey: "title") as! String)
+               }
+            return result.first as? T
+            
+        } catch {
+            print("Failed")
+            return nil
+        }
+    }
+    
+    
+    
     func saveContext(){
-     
         guard viewContext.hasChanges else {return}
         do{
             try viewContext.save()
+            viewContext.refreshAllObjects()
+
         } catch let error as NSError {
             print("Error: \(error), \(error.userInfo)")
         }

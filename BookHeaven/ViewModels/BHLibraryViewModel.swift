@@ -20,7 +20,7 @@ class BHLibraryViewModel: NSObject{
     weak var delegate: BHLibraryViewControllerDelegate?
     
     func getBooksFromCoreData(){
-        let cdManager = BHCoreDataManager()
+        let cdManager = BHCoreDataManager.shared
         let data = cdManager.fetch(BHBookCDModel.self)
         
         libraryItems.append(contentsOf:  data.compactMap { bookCDModel in

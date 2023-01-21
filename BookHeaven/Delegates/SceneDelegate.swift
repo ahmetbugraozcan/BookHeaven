@@ -27,11 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let viewController = UINavigationController(rootViewController: BHSplashViewController())
         window.rootViewController = viewController
-        
-        if let rootVC = viewController.viewControllers.first as? BHSplashViewController {
-            rootVC.container = persistentContainer
-        }
-        
+
         window.makeKeyAndVisible()
         self.window = window
     }

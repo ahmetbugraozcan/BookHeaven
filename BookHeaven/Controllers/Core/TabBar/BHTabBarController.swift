@@ -15,19 +15,9 @@ class BHTabBarController: UITabBarController {
         setUpTabs()
     }
     
-    var container: NSPersistentContainer!
-    
-    init(container: NSPersistentContainer) {
-        self.container = container
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("Unsupported")
-    }
-    
+   
     func setUpTabs(){
-        let homeViewController = BHHomeViewController(container: container)
+        let homeViewController = BHHomeViewController()
         let libraryViewController = BHLibraryViewController()
         let categoriesController = BHCategoriesViewController()
         let settingsController = BHSettingsViewController()

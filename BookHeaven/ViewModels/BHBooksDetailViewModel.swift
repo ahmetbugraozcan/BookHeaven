@@ -9,7 +9,7 @@ import Foundation
 
 final class BHBooksDetailViewModel{
     var book: BHBook
-    let coreDataManager = BHCoreDataManager()
+    let coreDataManager = BHCoreDataManager.shared
     
     init(_ book: BHBook) {
         self.book = book
@@ -34,6 +34,16 @@ final class BHBooksDetailViewModel{
                 print(String(describing: failure))
             }
         }
+    }
+    
+    func checkIsBookInFavorites(){
+        guard let bookModel = coreDataManager.fetchItemByCustomId(expected: BHBookCDModel.self, with: book.bookID, whereField: "bookID") else {
+            print("NOT IN FAVORITES")
+            return
+        }
+        
+        print("IN FAVORITES \(bookModel.title)")
+        
     }
     
     func saveBookToCoreData(){

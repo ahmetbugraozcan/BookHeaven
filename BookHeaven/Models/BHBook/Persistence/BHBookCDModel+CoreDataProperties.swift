@@ -71,7 +71,7 @@ extension BHBookCDModel : Identifiable {
 
 extension BHBookCDModel {
     func coreDataFromBHBook(with book: BHBook)  {
-        var coreDataManager = BHCoreDataManager()
+        var coreDataManager = BHCoreDataManager.shared
         //        self.authors = NSSet(array: book.authors ?? [])
         //        self.translators = NSSet(array: book.translators ?? [])
         self.id = book.id
@@ -80,6 +80,7 @@ extension BHBookCDModel {
         self.subjects = book.subjects
         self.copyright = book.copyright ?? false
         self.bookshelves = book.bookshelves
+        self.bookID = Int64(book.bookID ?? 0)
         
         var formats = coreDataManager.add(BHFormatCoreData.self)
         formats?.textHTML = book.formats.textHTML

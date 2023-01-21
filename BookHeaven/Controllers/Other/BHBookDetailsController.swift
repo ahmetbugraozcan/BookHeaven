@@ -50,16 +50,17 @@ class BHBookDetailsViewController: UIViewController{
         scrollView.addSubview(detailsView)
         view.addSubViews(scrollView, loadingView)
         
+        viewModel.checkIsBookInFavorites()
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "heart.fill")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
             style: .plain,
             target: self,
-            action: #selector(testMethod))
+            action: #selector(addBookToFavorites))
         addConstraints()
         
     }
     
-    @objc func testMethod(){
+    @objc func addBookToFavorites(){
         viewModel.saveBookToCoreData()
     }
     
