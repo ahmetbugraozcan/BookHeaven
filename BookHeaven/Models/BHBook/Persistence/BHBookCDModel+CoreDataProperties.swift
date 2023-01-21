@@ -91,7 +91,7 @@ extension BHBookCDModel {
         formats?.applicationOctetStream = book.formats.applicationOctetStream
         formats?.applicationRDFXML = book.formats.applicationRDFXML
         formats?.applicationEpubZip = book.formats.applicationEpubZip
-        
+        self.languages = book.languages
         
         
        
