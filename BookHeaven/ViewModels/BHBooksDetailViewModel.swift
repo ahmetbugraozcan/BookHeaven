@@ -50,7 +50,11 @@ final class BHBooksDetailViewModel{
     }
     
     func removeFromFavorites() {
-        
+        let isDeleted = coreDataManager.deleteItemByCustomId(expected: BHBookCDModel.self, id: book.bookID, whereField: "bookID")
+        if isDeleted {
+            isInFavorites = false
+            delegate?.didChangeFavoriteStatus()
+        }
     }
     
     func saveBookToCoreData(){
@@ -58,7 +62,11 @@ final class BHBooksDetailViewModel{
         bookModel.coreDataFromBHBook(with: book)
         isInFavorites = true
         delegate?.didChangeFavoriteStatus()
-        coreDataManager.saveContext()
+        do {
+            try coreDataManager.saveContext()
+        } catch {
+            print("An error occured while saving book ")
+        }
     }
 }
 

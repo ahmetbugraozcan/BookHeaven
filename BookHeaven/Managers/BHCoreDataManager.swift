@@ -72,16 +72,35 @@ final class BHCoreDataManager{
         }
     }
     
+    func deleteItemByCustomId<T:NSManagedObject>(expected type: T.Type, id: Int?, whereField: String) -> Bool{
+        guard id != nil else {
+            return false
+        }
+        
+        guard let item = fetchItemByCustomId(expected: T.self, with: id, whereField: whereField) else {
+            return false
+        }
+        
+        viewContext.delete(item)
+        
+        do {
+            try saveContext()
+        } catch {
+            return false
+        }
+        
+        return true
+    }
     
-    
-    func saveContext(){
+    func saveContext() throws{
         guard viewContext.hasChanges else {return}
         do{
             try viewContext.save()
-            viewContext.refreshAllObjects()
+//            viewContext.refreshAllObjects()
 
         } catch let error as NSError {
             print("Error: \(error), \(error.userInfo)")
+            throw error
         }
     }
 }
