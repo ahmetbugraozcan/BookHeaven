@@ -9,13 +9,27 @@ import UIKit
 import CoreData
 
 class BHLibraryViewController: UIViewController, BHLibraryViewControllerDelegate {
-    func didSelectBook(with book: BHBook) {
-        let viewModel = BHBooksDetailViewModel(book)
-        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: viewModel), animated: true)
+    func didReloadDataRequested() {
+        collectionView.reloadData()
     }
     
+  
     
-    var viewModel = BHLibraryViewModel()
+    var viewModel:BHLibraryViewModel
+    init(viewModel: BHLibraryViewModel){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    func didSelectBook(with book: BHBook) {
+        let bookDetailsViewModel = BHBooksDetailViewModel(book)
+        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: bookDetailsViewModel, favoritesViewModel: viewModel), animated: true)
+    }
+
     let collectionView = {
         let layout = UICollectionViewFlowLayout()
         
@@ -30,7 +44,7 @@ class BHLibraryViewController: UIViewController, BHLibraryViewControllerDelegate
         viewModel.delegate = self
         view.backgroundColor = .systemBackground
         //        view.translatesAutoresizingMaskIntoConstraints = false
-        viewModel.getBooksFromCoreData()
+
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
         view.addSubview(collectionView)
@@ -51,4 +65,5 @@ class BHLibraryViewController: UIViewController, BHLibraryViewControllerDelegate
 
 protocol BHLibraryViewControllerDelegate: AnyObject{
     func didSelectBook(with book: BHBook)
+    func didReloadDataRequested()
 }

@@ -9,17 +9,21 @@ import UIKit
 import CoreData
 /// Controller that contains 4 main tab - Home, Library, Categories, Settings
 class BHTabBarController: UITabBarController {
+    let libraryViewModel = BHLibraryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabs()
+        libraryViewModel.getBooksFromCoreData()
     }
     
    
     func setUpTabs(){
-        let homeViewController = BHHomeViewController()
-        let libraryViewController = BHLibraryViewController()
-        let categoriesController = BHCategoriesViewController()
+       
+        
+        let homeViewController = BHHomeViewController(libraryViewModel: libraryViewModel)
+        let libraryViewController = BHLibraryViewController(viewModel: libraryViewModel)
+        let categoriesController = BHCategoriesViewController(libraryViewModel: libraryViewModel)
         let settingsController = BHSettingsViewController()
         
         let navHome = UINavigationController(rootViewController: homeViewController)

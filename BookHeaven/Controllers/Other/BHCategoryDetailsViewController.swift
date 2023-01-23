@@ -9,13 +9,32 @@ import UIKit
 
 
 class BHCategoryDetailsCollectionViewController: UIViewController, BHCategoryDetailsCollectionViewControllerDelegate {
+    let libraryViewModel: BHLibraryViewModel
+    
+    var category: BHCategory
+    
+
+    init(category: BHCategory, libraryViewModel: BHLibraryViewModel) {
+        self.category = category
+        self.libraryViewModel = libraryViewModel
+        viewModel.category = category
+        self.categoriesList = BHCategoryDetailsCollectionView(frame: .zero, viewModel: viewModel)
+        super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    
     func didLoadNextBooks(indexPaths: [IndexPath]) {
         self.categoriesList.collectionView.insertItems(at: indexPaths)
     }
     
     func onSelectBook(book: BHBook) {
         let viewModel = BHBooksDetailViewModel(book)
-        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: viewModel), animated: true)
+        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: viewModel, favoritesViewModel: libraryViewModel), animated: true)
     }
     
     func categoryDidLoadFirstBooks() {
@@ -29,27 +48,14 @@ class BHCategoryDetailsCollectionViewController: UIViewController, BHCategoryDet
             
         }
     }
-    
-    var category: BHCategory
-    
+
     
     
     var viewModel = BHCategoryDetailsViewModel()
     var categoriesList: BHCategoryDetailsCollectionView
     
-    init(category: BHCategory) {
-  
-        self.category = category
-        viewModel.category = category
-        self.categoriesList = BHCategoryDetailsCollectionView(frame: .zero, viewModel: viewModel)
-        super.init(nibName: nil, bundle: nil)
-        viewModel.delegate = self
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("Unsupported")
-    }
-    
+
+
     override func viewDidLoad() {
         view.backgroundColor = .systemBackground
         

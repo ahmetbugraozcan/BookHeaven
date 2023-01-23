@@ -13,8 +13,8 @@ class BHBookDetailsViewController: UIViewController, BHBookDetailControllerDeleg
     }
     
     
-    var viewModel: BHBooksDetailViewModel
-    
+    let viewModel: BHBooksDetailViewModel
+    let favoritesViewModel: BHLibraryViewModel
     
     var detailsView: BHBookDetailsView
     var scrollView: UIScrollView = {
@@ -33,8 +33,9 @@ class BHBookDetailsViewController: UIViewController, BHBookDetailControllerDeleg
         return view
     }()
     
-    init(viewModel: BHBooksDetailViewModel) {
+    init(viewModel: BHBooksDetailViewModel, favoritesViewModel: BHLibraryViewModel) {
         self.viewModel = viewModel
+        self.favoritesViewModel = favoritesViewModel
         self.detailsView =  BHBookDetailsView(frame: .zero)
         detailsView.alpha = 0
         //        detailsView.backgroundColor = .blue

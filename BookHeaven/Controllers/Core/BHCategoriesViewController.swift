@@ -10,10 +10,21 @@ import UIKit
 class BHCategoriesViewController: UIViewController, BHCategoriesCollectionViewDelegate {
 
     func onSelectCategory(category: BHCategory) {
-        navigationController?.pushViewController(BHCategoryDetailsCollectionViewController(category: category), animated: true)
+        navigationController?.pushViewController(BHCategoryDetailsCollectionViewController(category: category, libraryViewModel: libraryViewModel), animated: true)
     }
     
-
+    let libraryViewModel: BHLibraryViewModel
+    
+    
+    init(libraryViewModel: BHLibraryViewModel) {
+        self.libraryViewModel = libraryViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    
     var bhCategoriesCollectionView = BHCategoriesCollectionView()
     override func viewDidLoad() {
         super.viewDidLoad()

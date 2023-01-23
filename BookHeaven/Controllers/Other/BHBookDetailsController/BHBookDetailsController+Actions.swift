@@ -11,10 +11,15 @@ import UIKit
 extension BHBookDetailsViewController {
     @objc func addBookToFavorites(){
         viewModel.saveBookToCoreData()
+        favoritesViewModel.libraryItems.append(viewModel.book)
+        favoritesViewModel.delegate?.didReloadDataRequested()
+        
     }
     
     @objc func removeBookFromFavorites(){
         viewModel.removeFromFavorites()
+        favoritesViewModel.libraryItems.removeAll { book in book.bookID == viewModel.book.bookID}
+        favoritesViewModel.delegate?.didReloadDataRequested()
     }
     
     @objc func onDownload(){

@@ -11,9 +11,19 @@ import CoreData
 /// View that contains list of Book
 final class BHHomeViewController: UIViewController, BHBooksListViewDelegate {
     
-
+    
+    let libraryViewModel: BHLibraryViewModel
+    init(libraryViewModel: BHLibraryViewModel) {
+        self.libraryViewModel = libraryViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    
     func didSelectBook(book: BHBook) {
-        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: BHBooksDetailViewModel(book)), animated: true)
+        navigationController?.pushViewController(BHBookDetailsViewController(viewModel: BHBooksDetailViewModel(book), favoritesViewModel: libraryViewModel), animated: true)
     }
  
     let collectionView = BHBooksListView()
